@@ -1,0 +1,25 @@
+/* cardslider.module.css */
+
+/* Hide default scrollbar */
+.container::-webkit-scrollbar {
+    display: none;
+  }
+  .container{
+    margin-left: 150px;
+  }
+  
+  .title{
+    display: flex;
+    flex-direction: column;
+  }
+  /* Optional: Style the dots and arrows as needed */
+  .slick-dots {
+    bottom: 10px; /* Adjust the position of the dots */
+  }
+  
+  .slick-prev,
+  .slick-next {
+    font-size: 20px;
+    z-index: 1; /* Ensure arrows are above the slider */
+  }
+  

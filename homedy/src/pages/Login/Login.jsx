@@ -4,7 +4,7 @@ const Login = () => {
 
 
   return (
-    <>
+    <div className={styles.background}>
     <div className={styles.wrapper}>
       <form>
         <h1>Login</h1>
@@ -24,7 +24,7 @@ const Login = () => {
         </div>
       </form>
     </div>
-    </>
+    </div>
   )
   }
 export default Login;

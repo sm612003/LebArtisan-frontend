@@ -26,9 +26,9 @@ const Footer = () => {
 
   return (
     <footer>
-      <h3 className={style.footerCopyright}>
+      {/* <h3 className={style.footerCopyright}>
         Copyright , All rights reserved | Powered By : <u><NavLink to="/developers" style={{color:"white"}}>Codi Team</NavLink></u>
-      </h3>
+      </h3> */}
     </footer>
   
   )

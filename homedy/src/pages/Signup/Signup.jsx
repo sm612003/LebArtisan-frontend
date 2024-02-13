@@ -8,6 +8,8 @@ const Signup = () => {
   
 
   return (
+    <div className={styles.background}>
+
     <div className={styles.wrapper}>
       <form>
         <h1>Register</h1>
@@ -38,6 +40,8 @@ const Signup = () => {
         <button type="submit" className={styles.btn}>Register</button>
       </form>
     </div>
+    </div>
+
   );
 };
 

@@ -1,0 +1,183 @@
+.containerHero {
+  position: relative;
+
+    margin: 0;
+    background: linear-gradient(180deg ,#E1E1E0 -15.35%,rgba(63,0,1,0));
+    display: flex; /* Make the container a flexbox */
+  }
+  .container {
+    padding: 0 8.4rem;
+  }
+  
+  .main {
+    padding-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .detail {
+    width: 50%;
+  }
+  
+  .discount {
+    color: #0E4D4F;
+    font-size: 2rem;
+    font-weight: 300;
+    word-spacing: 8px;
+    animation: topSideAni 1s ease forwards;
+  }
+  
+  .discount::before {
+    content: "";
+    height: 3px;
+    width: 60px;
+    display: inline-block;
+    background-color: var(--primary-color);
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+  
+  h1 {
+    color: #0E4D4F;
+    font-size: 3rem;
+    font-weight: 600;
+    animation: leftSideAni 1s ease forwards;
+    animation-delay: 1s;
+  }
+  
+  .genralBtn {
+    margin-top: 1.5rem;
+    background-color: black;
+    border: 2px solid var(--primary-color);
+    font-family: 'Outfit', sans-serif;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 10px;
+    color: red;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: topSideAni 1s ease forwards;
+    animation-duration: 1s;
+  }
+  
+  .genralBtn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+  }
+  
+  .images {
+    width: 50%;
+    text-align: end;
+    object-fit: cover;
+
+  }
+  
+  .imgW {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    
+  }
+  
+  /* Add your keyframe animations here */
+  
+
+@media (max-width: 930px) {
+    .backgroundImage{
+      height: 695px;
+    }
+    }
+    /* @media (max-width: 784px) {
+        .backgroundImage {
+    
+      height : 832px;
+        
+    }
+    } */
+@media (max-width: 420px) {
+    .backgroundImage{
+      height: 726px;
+
+    }
+    .button {
+min-width: 196px;      
+        font-size: 17px;
+  
+    }
+    }
+
+
+@media (max-width:375px) {
+.button{
+    min-width: 170px;
+    height: 3rem; 
+font-size: 15px;   }
+.title{
+    font-size: 25px;
+}
+.Title {
+    font-size: 2.4vh;
+   
+}
+}
+@media (max-width:280px) {
+.button{
+    min-width: 176px;
+height: 3rem;
+font-size: 16px;
+margin-left: -2.1rem;
+}
+.Title{
+    color: white;
+    font-size: 3.5vh;
+    font-weight: 500;
+    letter-spacing: 0px;
+    /* gap: 0; */
+    line-height: 30px;
+}
+
+.content{
+    font-size: 1.5vh;
+
+}
+    .backgroundImage{
+      height: 896px;
+
+    }
+}
+/* @media (min-width:281px) {
+.backgroundImage{
+height: 938px;
+}
+} */
+
+
+
+
+@media (max-width:390px) {
+    .title{
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        height: 75%;
+        width: 100%;
+        letter-spacing: 3px;
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 1rem;
+    }
+   .content{
+    width: 88%;
+    margin-left: 20px;
+   }
+   .Title{
+    font-size: 2vh;
+   }
+ 
+}
