@@ -94,7 +94,7 @@ function Carousel() {
 
             </div>
         </div>
-        <div className={styles.card}>
+        <div className="card">
            <img src={img2} alt="Image 2" style={{ width: "80%", height: "275px" }} />
          <div className="card-body">
          <h3>hello</h3>
