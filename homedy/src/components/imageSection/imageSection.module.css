@@ -1,0 +1,39 @@
+/* ImageGrid.module.css */
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+  
+  .image1 {
+    grid-column: 1 / 2;
+    grid-row: 0 / 3; 
+    width:100%;
+    height: 500px; 
+}
+  
+  .image2 {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    width: 95%;
+    height: 517px;
+  }
+  
+  .image3 {
+    grid-column: 4 / 4;
+    grid-row: 4 / 4;
+    width:100%;
+    height: 500px;
+}
+
+  
+  
+  .image4 {
+    grid-column: 4 / 4;
+    grid-row: 2 / 3;
+    width:100%;
+    height: 500px;
+  }
+  
