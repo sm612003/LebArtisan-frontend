@@ -1,65 +1,63 @@
-import React from "react";
-import { aweicon, footer } from "../../data/Data.js";
-import '../../main.css'
+import React from 'react';
+import {
+  FaDribbbleSquare,
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaInstagram,
+  FaTwitterSquare,
+} from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div className="bg-white text-black py-8 px-4">
-      <div className="flex justify-between">
-        <div className="w-1/2">
-          <div className="flex justify-around uppercase">
-            {footer.map((val, index) => (
-              <div key={index}>
-                <div className="text-2xl font-semibold mb-2">{val.header}</div>
-                <div
-                  className="flex"
-                  style={{ display: "flex", flexDirection: "column" }}
-                >
-                  {val.title.map((item, subIndex) => (
-                    <span
-                      key={subIndex}
-                      className="mr-2 mb-2 hover:text-red-500 cursor-pointer"
-                    >
-                      {item.subtitle}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+    <div className='max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
+      <div>
+        <h1 className='w-full text-3xl font-bold text-[#00df9a]'>REACT.</h1>
+        <p className='py-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id odit ullam iste repellat consequatur libero reiciendis, blanditiis accusantium.</p>
+        <div className='flex justify-between md:w-[75%] my-6'>
+            <FaFacebookSquare size={30} />
+            <FaInstagram size={30} />
+            <FaTwitterSquare size={30} />
+            <FaGithubSquare size={30} />
+            <FaDribbbleSquare size={30} />
         </div>
-        <div class="w-1/2 p-6 bg-gray-100 rounded-lg shadow-md">
-          <h1 className="text-2xl font-semibold mb-4">
-            SIGN UP FOR NEWSLETTER
-          </h1>
-          <p className="text-gray-600 mb-4">
-            Don't miss out on exciting promotions and latest shopping news
-          </p>
-          <input
-            type="text"
-            name="text"
-            placeholder="Your Email Address..."
-            class="w-2/3 p-4 border border-gray-300 rounded mb-4"
-          />
-          <button
-            type="button"
-            name="btn"
-            class="bg-black text-white pt-4 pb-4 p-6 ml-4 rounded hover:bg-red-600"
-          >
-            SUBSCRIBE
-          </button>
-
-          <div className="flex text-center">
-            {aweicon.slice(2, 6).map((val, index) => (
-              <div
-                key={index}
-                className="bg-white p-2 pr-4 pl-4 mr-2 text-2xl hover:bg-red-500 hover:text-white duration-300"
-              >
-                {val.icon}
-              </div>
-            ))}
-          </div>
-        </div>
+      </div>
+      <div className='lg:col-span-2 flex justify-between mt-6'>
+    <div>
+        <h6 className='font-medium text-gray-400'>Solutions</h6>
+        <ul>
+            <li className='py-2 text-sm'>Analytics</li>
+            <li className='py-2 text-sm'>Marketing</li>
+            <li className='py-2 text-sm'>Commerce</li>
+            <li className='py-2 text-sm'>Insights</li>
+        </ul>
+    </div>
+    <div>
+        <h6 className='font-medium text-gray-400'>Support</h6>
+        <ul>
+            <li className='py-2 text-sm'>Pricing</li>
+            <li className='py-2 text-sm'>Documentation</li>
+            <li className='py-2 text-sm'>Guides</li>
+            <li className='py-2 text-sm'>API Status</li>
+        </ul>
+    </div>
+    <div>
+        <h6 className='font-medium text-gray-400'>Company</h6>
+        <ul>
+            <li className='py-2 text-sm'>About</li>
+            <li className='py-2 text-sm'>Blog</li>
+            <li className='py-2 text-sm'>Jobs</li>
+            <li className='py-2 text-sm'>Press</li>
+            <li className='py-2 text-sm'>Careers</li>
+        </ul>
+    </div>
+    <div>
+        <h6 className='font-medium text-gray-400'>Legal</h6>
+        <ul>
+            <li className='py-2 text-sm'>Claim</li>
+            <li className='py-2 text-sm'>Policy</li>
+            <li className='py-2 text-sm'>Terms</li>
+        </ul>
+    </div>
       </div>
     </div>
   );

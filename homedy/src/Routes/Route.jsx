@@ -6,11 +6,16 @@ import { UserContext } from "../UserContext/UserContext.jsx";
 import Signup from "../pages/Signup/Signup.jsx";
 import Login from "../pages/Login/Login.jsx";
 import Home from "../pages/home/home.jsx";
+import Workshop from "../pages/WorkShop/workshop.jsx";
+import Blog from '../pages/Blog/index.jsx';
+import Dashboard from "../pages/Dashboard/Dashboar.jsx";
+
 // import Unauthorized from "../Pages/Unauthorized/Unauthorized.jsx";
 // import NotFound from "../Pages/NotFound/NotFound.jsx";
 
 import Layout from "./Layout.jsx";
 import Artisan from "../pages/ArtisanPage/artisanpage.jsx";
+import Eventspage from "../pages/EventsPage/eventspage.jsx";
 
 const Router = () => {
   // const { user, checkUser } = useContext(UserContext);
@@ -23,18 +28,25 @@ const Router = () => {
             {/* /* <Route index path="/confirmed" element={<ConfirmationPage />} /> */}
              {/* <Route path="/product" element={<Products />} /> */}
              <Route index path="/services" element={<Artisan/>} />
-            {/* <Route index path="/contact" element={<Contact />} />
-            <Route index path="/cart" element={<Cart />} />
+             <Route index path="/workshop" element={<Workshop />} />
+             <Route index path="/Events" element={<Eventspage />} />
+
+            {/* <Route index path="/cart" element={<Cart />} />
             <Route index path="/profile" element={<Profile />} />
             <Route index path="/summary" element={<Summary />} />
             <Route path="/productdetails/:slug" element={<ProductDetails />} />
             <Route path="/about" element={<Aboutus />} />
             <Route path="/developers" element={<PoweredByUS />} />
-            <Route path="/checkout" element={<Checkout />} />   */}
+            <Route path="/checkout" element={<Checkout />} />    */}
           </Route>
 
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path='/blog/:id' element={<Blog />} />
+          <Routes>
+              <Route path="/" element={<Dashboard />} />
+              
+            </Routes>
           {/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
           {/* <Route path="/*" element={<NotFound />} /> */}
 

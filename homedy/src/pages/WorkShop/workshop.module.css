@@ -1,4 +1,4 @@
-/* 
+
   
   .search-bar-container {
     padding-top: 20vh;
@@ -10,9 +10,4 @@
     justify-content: flex-start;
     align-items: center;
     min-width: 200px;
-  } */
-
-img {
-  border-style: solid;
-  border-width: 5px;
-}
+  }

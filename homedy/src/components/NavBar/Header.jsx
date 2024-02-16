@@ -54,14 +54,14 @@ Artisans                </NavLink>
               {/* NavLink for Product page */}
               <li >
 
-                <NavLink to='/product' activeclassname={styles.activeLink} className={`${styles.menuItem} ${location.pathname === '/product' ? styles.activeNavItem : ''} ${location.pathname === '/checkout' || location.pathname === '/confirmed' || location.pathname === '/developers' || location.pathname === '/profile' || location.pathname === "/cart" ? styles.blue : styles.white}`}>
+                <NavLink to='/workshop' activeclassname={styles.activeLink} className={`${styles.menuItem} ${location.pathname === '/workshop' ? styles.activeNavItem : ''} ${location.pathname === '/checkout' || location.pathname === '/confirmed' || location.pathname === '/developers' || location.pathname === '/profile' || location.pathname === "/cart" ? styles.blue : styles.white}`}>
 Workshop                </NavLink>
               </li>
 
               {/* NavLink for About Us */}
               <li >
 
-                <NavLink to='/about' activeclassname={styles.activeLink} className={`${styles.menuItem} ${location.pathname === '/about' ? styles.activeNavItem : ''} ${location.pathname === '/checkout' || location.pathname === '/confirmed' || location.pathname === '/developers' || location.pathname === '/profile' || location.pathname === "/cart" ? styles.blue : styles.white}`}>
+                <NavLink to='/Events' activeclassname={styles.activeLink} className={`${styles.menuItem} ${location.pathname === '/Events' ? styles.activeNavItem : ''} ${location.pathname === '/checkout' || location.pathname === '/confirmed' || location.pathname === '/developers' || location.pathname === '/profile' || location.pathname === "/cart" ? styles.blue : styles.white}`}>
 Events                </NavLink>
               </li>
 

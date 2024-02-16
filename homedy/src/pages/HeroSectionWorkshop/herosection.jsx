@@ -1,4 +1,4 @@
-import img from '../../assets/Hero_image__3_-removebg.png';
+import img from '../../assets/Intersect (8).png';
 import React from "react";
 import { Link } from "react-router-dom"; 
 import HeroSectionCss from "./herosection.module.css";
@@ -23,9 +23,10 @@ const HeroSectionHomepage = () => {
     <section className={`${HeroSectionCss.container} ${HeroSectionCss.containerHero}`}>
     <div className={HeroSectionCss.main}>
       <div className={HeroSectionCss.detail}>
-        <h1>Elevate Your Style with Unique Handmade </h1>
-        <p className={HeroSectionCss.discount}>Discover a world of elegance and style with our unique handmade
-        Crafted to perfection,each piece is a testament to artistry and individuality.</p>
+        <h1>Learn  Handcraft to start your own business</h1>
+        <p className={HeroSectionCss.discount}>
+          Select desired courses from online or on-site categories,
+         get individual assistance from instructors and master your new skills</p>
   
          
       </div>
