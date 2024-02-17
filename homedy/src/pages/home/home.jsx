@@ -6,6 +6,13 @@ import { ImageGallery } from '../../components/ImageGallery';
 import HeroSectionHomepage from "../../components/HeroSection/HeroSection";
 import { SearchResultsList } from "../../components/searchlist/searchlist";
 import About from '../../components/About/About';
+import styles, { layout } from "../../style.js";
+import WorkProcess from '../../components/WorkProcess/WorkProcess.jsx';
+import Services from '../../components/Services/Services.jsx'
+import Business from '../../components/Business';
+import Testimonials  from '../../components/Testimonials/Testimonials.jsx';
+import  Work  from '../../components/Work/Work.jsx'
+
 export default function Home() {
   const [results, setResults] = useState([]);
 
@@ -21,9 +28,13 @@ export default function Home() {
         {results && results.length > 0 && <SearchResultsList results={results} />}
       </div>  */}
           {/* <CardSlider/> */}
-<About/>
+{/* <About/> */}
+<Services/>
+{/* <Business/> */}
+<Testimonials/>
+<WorkProcess/>
+<Work/>
 {/* <ImageGrid /> */}
-   
     </div>
  )
 }

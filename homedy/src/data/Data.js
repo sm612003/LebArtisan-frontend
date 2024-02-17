@@ -1,5 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import img from '../assets/unsplash_L5NhPcGhsSM.png'
+import star from '../assets/Star.svg';
+import shield from '../assets/Shield.svg';
+import send from '../assets/Send.svg'
+import imaage1 from '../assets/images/services_img_1.svg'
+import imaage2 from '../assets/images/services_img_2.svg'
+import imaage3 from '../assets/images/services_img_3.svg'
+import imaage4 from '../assets/images/services_img_4.svg'
+
+
 
 export const nav = [
   {
@@ -48,7 +57,29 @@ export const aweicon = [
     icon: <FontAwesomeIcon className="mr-4" icon={["fab", "twitter"]} />,
   },
 ];
-
+export const features = [
+  {
+    id: "feature-1",
+    icon: star,
+    title: "Rewards",
+    content:
+      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+  },
+  {
+    id: "feature-2",
+    icon: shield,
+    title: "100% Secured",
+    content:
+      "We take proactive steps make sure your information and transactions are secure.",
+  },
+  {
+    id: "feature-3",
+    icon: send,
+    title: "Balance Transfer",
+    content:
+      "A balance transfer credit card can save you a lot of money in interest charges.",
+  },
+];
 export const sliderdata = [
   {
     img: "../img/slideshow/unsplash_L5NhPcGhsSM.png",
@@ -60,7 +91,94 @@ export const sliderdata = [
     img: "../img/slideshow/slide3.jpg",
   },
 ];
+ export const testimonials = [
+  {
+      name: "Lelia Merritt",
+      post: "Graphic Designer",
+      paragraph: "Aliquam et odio arcu. Vestibulum pharetra tincidunt odio, sed pulvinar magna tempus quis. Mauris risus odio, semper sit amet tortor a, tristique consectetur urna."
+  },
+  {
+      name: "John Huston",
+      post: "Web Developer",
+      paragraph: "Aliquam et odio arcu. Vestibulum pharetra tincidunt odio, sed pulvinar magna tempus quis. Mauris risus odio, semper sit amet tortor a, tristique consectetur urna."
+  },
+  {
+      name: "Jeniffer Green",
+      post: "Marketing Manager",
+      paragraph: "Aliquam et odio arcu. Vestibulum pharetra tincidunt odio, sed pulvinar magna tempus quis. Mauris risus odio, semper sit amet tortor a, tristique consectetur urna."
+  },
+]
+ export const works = [
+  {
+      image: `${img}`
+  },
+  {
+      image: `${img}`
+  },
+  {
+      image: `${img}`
+  },
+  {
+      image: `${img}`
+  },
+  {
+      image: `${img}`
+  },
+  {
+      image: `${img}`
+  },
+];
 
+ export const services = [
+    {
+        image: `${imaage1}`,
+        title: "Web Design",
+        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
+    },
+    {
+        image: `${imaage2}`,
+        title: "Branding",
+        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
+    },
+    {
+        image: `${imaage1}`,
+        title: "UX Design",
+        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
+    },
+    {
+        image: `${imaage2}`,
+        title: "Logo Create",
+        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
+    },
+    {
+        image: `${imaage3}`,
+        title: "Illustration",
+        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
+    },
+    {
+        image: `${imaage4}`,
+        title: "Graphics",
+        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
+    },
+];
+ export const work_process = [
+  {
+      title: "Sketch",
+      paragraph: "Nunc sodales lacus nec felis suscipit dictum"
+  },
+  {
+      title: "Design",
+      paragraph: "Nunc sodales lacus nec felis suscipit dictum"
+  },
+  {
+      title: "Develop",
+      paragraph: "Nunc sodales lacus nec felis suscipit dictum"
+  },
+  {
+      title: "End-Product",
+      paragraph: "Nunc sodales lacus nec felis suscipit dictum"
+  },
+];
 export const category = [
   {
     img: "../img/category/category1.png",

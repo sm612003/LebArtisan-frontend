@@ -5,6 +5,7 @@ import Chip from '../../common/Chip/index';
 import EmptyList from '../../common/EmptyList/index';
 import './styles.css';
 import { Link } from 'react-router-dom';
+import Business from '../../components/Business';
 
 const Blog = () => {
   const { id } = useParams();
@@ -41,6 +42,7 @@ const Blog = () => {
       ) : (
         <EmptyList />
       )}
+
     </>
   );
 };
