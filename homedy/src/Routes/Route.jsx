@@ -9,6 +9,7 @@ import Home from "../pages/home/home.jsx";
 import Workshop from "../pages/WorkShop/workshop.jsx";
 import Blog from '../pages/Blog/index.jsx';
 import Dashboard from "../pages/Dashboard/Dashboar.jsx";
+import ProductDetail from "../pages/portfolioArtisan/portfolio.jsx";
 
 // import Unauthorized from "../Pages/Unauthorized/Unauthorized.jsx";
 // import NotFound from "../Pages/NotFound/NotFound.jsx";
@@ -43,6 +44,8 @@ const Router = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path='/blog/:id' element={<Blog />} />
+          <Route path="/product/:productId" element={<ProductDetail/>} /> {/* Define route for product detail */}
+
         
           {/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
           {/* <Route path="/*" element={<NotFound />} /> */}

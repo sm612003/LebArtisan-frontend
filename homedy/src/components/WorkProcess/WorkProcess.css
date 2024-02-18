@@ -17,12 +17,14 @@
 .workprocess-item-title span:first-child{
     font-size: 45px;
     margin-right: 1.6rem;
+    color: #0E4D4F;
 }
 
 @media screen and (min-width: 678px){
     .workprocess-list{
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3rem;
+        /* background-color: #E0EFF6; */
     }
 }
 

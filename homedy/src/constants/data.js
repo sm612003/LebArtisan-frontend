@@ -1,4 +1,7 @@
 import images from "./images";
+import img1 from '../assets/images/pexels-pixabay-301703.jpg'
+import img2 from '../assets/images/pexels-antoni-shkraba-4348401.jpg'
+import img3 from  '../assets/images/pexels-antoni-shkraba-4348081.jpg'
 
 const services = [
     {
@@ -35,22 +38,22 @@ const services = [
 
 const works = [
     {
-        image: `${images.work_img_1}`
+        image: `${img1}`
     },
     {
-        image: `${images.work_img_2}`
+        image: `${img2}`
     },
     {
-        image: `${images.work_img_3}`
+        image: `${img3}`
     },
     {
-        image: `${images.work_img_4}`
+        image: `${img1}`
     },
     {
-        image: `${images.work_img_5}`
+        image: `${img2}`
     },
     {
-        image: `${images.work_img_6}`
+        image: `${img3}`
     },
 ];
 

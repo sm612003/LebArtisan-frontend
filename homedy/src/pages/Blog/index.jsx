@@ -5,8 +5,8 @@ import Chip from '../../common/Chip/index';
 import EmptyList from '../../common/EmptyList/index';
 import './styles.css';
 import { Link } from 'react-router-dom';
-import Business from '../../components/Business';
-
+import WorkProcess from '../../components/WorkProcess/WorkProcess';
+import Services from '../../components/Services/Services';
 const Blog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
@@ -28,6 +28,7 @@ const Blog = () => {
           <header>
             <p className='blog-date'>Published {blog.createdAt}</p>
             <h1>{blog.title}</h1>
+
             <div className='blog-subCategory'>
               {blog.subCategory.map((category, i) => (
                 <div key={i}>
@@ -42,6 +43,9 @@ const Blog = () => {
       ) : (
         <EmptyList />
       )}
+<WorkProcess/>
+<Services/>
+
 
     </>
   );

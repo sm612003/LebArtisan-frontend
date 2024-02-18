@@ -93,20 +93,18 @@ export const sliderdata = [
 ];
  export const testimonials = [
   {
-      name: "Lelia Merritt",
-      post: "Graphic Designer",
-      paragraph: "Aliquam et odio arcu. Vestibulum pharetra tincidunt odio, sed pulvinar magna tempus quis. Mauris risus odio, semper sit amet tortor a, tristique consectetur urna."
+    name: "Welcome to LebArtisan",
+    paragraph: " your gateway to discovering and supporting the rich tapestry of Lebanese craftsmanship. At LebArtisan Connect, we are passionate about celebrating the creativity, skill, and cultural heritage of local artisans across Lebanon."
+},
+  {
+      name: "Our Mission",
+      paragraph: "provide a vibrant marketplace that connects discerning buyers with talented artisans, fostering a community of appreciation and support for authentic handmade goods."
   },
   {
-      name: "John Huston",
-      post: "Web Developer",
-      paragraph: "Aliquam et odio arcu. Vestibulum pharetra tincidunt odio, sed pulvinar magna tempus quis. Mauris risus odio, semper sit amet tortor a, tristique consectetur urna."
-  },
-  {
-      name: "Jeniffer Green",
-      post: "Marketing Manager",
-      paragraph: "Aliquam et odio arcu. Vestibulum pharetra tincidunt odio, sed pulvinar magna tempus quis. Mauris risus odio, semper sit amet tortor a, tristique consectetur urna."
-  },
+      name: "Our Values",
+      paragraph: "We empower artisans by providing them with a platform to showcase their work, connect with buyers, and grow their businesses."
+    },
+ 
 ]
  export const works = [
   {
@@ -132,52 +130,39 @@ export const sliderdata = [
  export const services = [
     {
         image: `${imaage1}`,
-        title: "Web Design",
-        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
+        title: "cost",
+        paragraph: "$50 per participant"
     },
     {
         image: `${imaage2}`,
-        title: "Branding",
-        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
+        title: "Date",
+        paragraph: "Saturday, March 15 2024 "
     },
     {
         image: `${imaage1}`,
-        title: "UX Design",
-        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
+        title: "Capacity",
+        paragraph: " Limited to 20 participants"
     },
-    {
-        image: `${imaage2}`,
-        title: "Logo Create",
-        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
-    },
-    {
-        image: `${imaage3}`,
-        title: "Illustration",
-        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
-    },
-    {
-        image: `${imaage4}`,
-        title: "Graphics",
-        paragraph: "Vivamus a accumsan mauris. Nunc sodales lacus nec felis suscipit dictum. Mauris auctor enim in justo euismod imperdiet."
-    },
+  
 ];
  export const work_process = [
   {
-      title: "Sketch",
+      title: " a bare lampshade",
       paragraph: "Nunc sodales lacus nec felis suscipit dictum"
   },
   {
-      title: "Design",
+      title: " a yarn needle, ",
       paragraph: "Nunc sodales lacus nec felis suscipit dictum"
   },
   {
-      title: "Develop",
+      title: " a colored electrical cable,",
       paragraph: "Nunc sodales lacus nec felis suscipit dictum"
   },
   {
-      title: "End-Product",
+      title: " a lamp socket,",
       paragraph: "Nunc sodales lacus nec felis suscipit dictum"
   },
+
 ];
 export const category = [
   {

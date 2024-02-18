@@ -17,14 +17,12 @@ export default function Artisan() {
         {/* < HeroSectionHomepage/> */}
 
         {/* <Category /> */}
-        <Arrival />
         {/* <Popular /> */}
         <BestSeller />
         {/* <Banner /> */}
         {/* <Brand /> */}
 
       </div>
-      <ContactUs />
     </>
   );
 }

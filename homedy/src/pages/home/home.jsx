@@ -7,9 +7,7 @@ import HeroSectionHomepage from "../../components/HeroSection/HeroSection";
 import { SearchResultsList } from "../../components/searchlist/searchlist";
 import About from '../../components/About/About';
 import styles, { layout } from "../../style.js";
-import WorkProcess from '../../components/WorkProcess/WorkProcess.jsx';
-import Services from '../../components/Services/Services.jsx'
-import Business from '../../components/Business';
+import Arrival from '../../components/Arrival.js';
 import Testimonials  from '../../components/Testimonials/Testimonials.jsx';
 import  Work  from '../../components/Work/Work.jsx'
 
@@ -29,11 +27,12 @@ export default function Home() {
       </div>  */}
           {/* <CardSlider/> */}
 {/* <About/> */}
-<Services/>
 {/* <Business/> */}
-<Testimonials/>
-<WorkProcess/>
 <Work/>
+<Testimonials/>
+
+<Arrival />
+
 {/* <ImageGrid /> */}
     </div>
  )

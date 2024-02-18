@@ -73,9 +73,8 @@ const Arrival = () => {
   return (
     <div className="p-8 overflow-hidden text-center relative bg-gray-50 z-0">
       <Heading
-        title="New Arrival"
-        description="SHOP THE NEW SELECTION OF NEW ARRIVALS AT OUR STORE. FILL OUT YOUR
-          WISHLIST ITEM."
+        title="Upcoming Events"
+        description="Mark your calendars and join us for unforgettable experiences!"
       />
       <Slider {...settings}>
         {products.slice(0, 6).map((item, index) => (

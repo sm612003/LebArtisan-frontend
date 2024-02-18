@@ -21,7 +21,7 @@ const Testimonials = () => {
         <div className='container'>
             <div className='testimonials-content'>
                 <div className='section-title'>
-                    <h3 className='text-brown'>Client <span className='text-white'>Testimonials</span></h3>
+                    <h3 className='text-brown'>About <span className='about-us'>Us</span></h3>
                 </div>
 
                 <div className='testimonials-list'>
@@ -30,10 +30,10 @@ const Testimonials = () => {
                             testimonials.map((testimonial, index) => {
                                 return (
                                     <div className='testimonials-item text-center text-white' key = {index}>
-                                        <p className='text mx-auto'>{testimonial.paragraph}</p>
                                         <div className='testimonials-item-text'>
                                             <span className='fs-22'>{testimonial.name}</span>
-                                            <small>{testimonial.post}</small>
+                                            <p className='text mx-auto'>{testimonial.paragraph}</p>
+
                                         </div>
                                     </div>
                                 )

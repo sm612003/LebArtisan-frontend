@@ -6,7 +6,6 @@ import { ImageGallery } from '../../components/ImageGallery';
 const Eventspage = () => {
   return (
     <div>
-      <ImageGallery />
 
     </div>
   )

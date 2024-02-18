@@ -4,21 +4,22 @@ export const blogList = [
     title: '7 CSS tools you should be using ',
     category: 'development',
     subCategory: ['frontend', 'ui/ux', 'design'],
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    description:"Want to immerse yourself in a creative universe full of softness and cozy wool? Discover artisanal weaving techniques using so much more than a standard loom and create a dazzling lampshade to brighten up any room. The possibilities are endless! In this online course, develop elaborate designs and master circular weaving techniques using thick rope and tufting wool to create a beautiful ceiling lampshades.",
     authorName: 'John Doe',
     authorAvatar: '/assets/images/author.jpg',
     createdAt: 'June 03, 2021',
+    titltwo:'Who is this online course for ?',
     cover: '/assets/images/pic2.jpg',
   },
   {
     id: 2,
-    title: 'Milan Places That Highlight The City',
+    title: 'Learn how to create a contemporary circular lampshade woven with thick rope and tufted wool',
     category: 'travel',
     subCategory: ['vacation', 'holidays', 'sight seeing'],
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Want to immerse yourself in a creative universe full of softness and cozy wool? Discover artisanal weaving techniques using so much more than a standard loom and create a dazzling lampshade to brighten up any room. The possibilities are endless!  In this online course, develop elaborate designs and master circular weaving techniques using thick rope and tufting wool to create a beautiful ceiling lampshades.",
     authorName: 'John Doe',
+    titltwo:'Who is this online course for ?',
     authorAvatar: '/assets/images/author.jpg',
     createdAt: 'June 03, 2021',
     cover: '/assets/images/pic3.png',
@@ -31,6 +32,7 @@ export const blogList = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     authorName: 'John Doe',
+    titltwo:'Who is this online course for ?',
     authorAvatar: '/assets/images/author.jpg',
     createdAt: 'June 03, 2021',
     cover: '/assets/images/pic4.png',
@@ -39,6 +41,7 @@ export const blogList = [
     id: 4,
     title: 'ADVENTURE IN YOU',
     category: 'adventure',
+    titltwo:'Who is this online course for ?',
     subCategory: ['adrenaline', 'stay-fit', 'lifestyle'],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -50,6 +53,8 @@ export const blogList = [
   {
     id: 5,
     title: 'Loaded BBQ Baked Potatoes',
+    titltwo:'Who is this online course for ?',
+
     category: 'cooking',
     subCategory: ['bbq', 'food', 'lifestyle'],
     description:
@@ -62,6 +67,8 @@ export const blogList = [
   {
     id: 6,
     title: 'Beyond the Beach',
+    titltwo:'Who is this online course for ?',
+
     category: 'travel',
     subCategory: ['beaches', 'sea', 'holidays'],
     description:
@@ -75,6 +82,8 @@ export const blogList = [
   {
     id: 7,
     title: 'Art & Perception',
+    titltwo:'Who is this online course for ?',
+
     category: 'art',
     subCategory: ['skill', 'design', 'passion'],
     description:

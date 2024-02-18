@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Heading from "../common/Heading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Category = () => {
   var settings = {
@@ -105,12 +106,16 @@ const Category = () => {
         {menuItem.map((item, index) => (
           <div key={index} className="relative">
             <div className="m-4 relative group">
+            <Link to={`/product/${item.id}`}> 
+
+
               <img
                 src={item.img}
                 title={item.name}
                 alt={item.name}
                 className="mx-auto h-full w-full hover:shadow-md transition-all duration-300 bg-cover"
               />
+              </Link>
               <div className="icons absolute top-0 right-0 transform translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
                 <div className="flex flex-wrap flex-col  p-2 mr-1 mt-1">
                   <FontAwesomeIcon
