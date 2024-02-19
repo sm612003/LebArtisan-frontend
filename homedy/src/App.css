@@ -22,10 +22,7 @@ img{
   width: 100%;
   display: block;
 }
-a{
-  color: unset;
-  text-decoration: none;
-}
+
 .container{
   /* max-width: 1200px; */
   margin: 0 auto;
@@ -84,9 +81,7 @@ a{
 .text-grey{
   color: var(--grey-color);
 }
-.text-dark{
-  color: var(--dark-color);
-} */
+
 
 .fw-2{font-weight: 200;}
 .fw-3{font-weight: 300;}

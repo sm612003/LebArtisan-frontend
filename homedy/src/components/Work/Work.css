@@ -1,5 +1,6 @@
 .work-list{
     row-gap: 3rem;
+    
 }
 .text{
     color:#70908B;
@@ -7,6 +8,15 @@
 .work-item{
     position: relative;
 }
+.work-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Artisan{
+    color: #0E4D4F !important;
+   } 
+
 .work-item::after{
     content: "";
     position: absolute;
@@ -69,16 +79,17 @@
 .image-box-close-btn{
     cursor: pointer;
 }
-.button,
-.view-more-button {
+
+
+.button a {
     width: fit-content;
     text-align: center;
-    color: white;
-    text-decoration: none;
-    background-color: #C62507;
+    color: white !important;
+    text-decoration: none !important;
+    background-color: #70908B;
     border: 1px solid transparent;
     border-radius: 7px;
-    margin-top: 1rem;
+    /* margin-top: 2rem; */
     height: 11%;
     font-size: 16px;
     font-weight: 400px;
@@ -86,34 +97,10 @@
     transition: all .4s ease;
 }
 
-.button:hover,
-.view-more-button:hover {
-    color: #F83739;
-    border: 1px solid #F3494A;
-    background-color: transparent;
+.style{
+    margin-top: 50px;
 }
 
-/* .button {
-    width: fit-content;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    background-color: #C62507;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    margin-top: 2rem;
-    height: 11%;
-    font-size: 16px;
-    font-weight: 400px;
-    padding: 10px 36px;
-    transition: all .4s ease;
-}
-.button:hover{
-    color: #F83739 ;
-    border: 1px solid #F3494A;
-    background-color: transparent;
-
-} */
 
 @media screen and (min-width: 576px){
     .image-box-content{

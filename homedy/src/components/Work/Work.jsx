@@ -28,7 +28,7 @@ const Work = () => {
         <div className='container'>
             <div className='work-content'>
                 <div className='section-title'>
-                    <h3 className='text-brown'>Our <span className='text-dark'>Artisans</span></h3>
+                    <h3 className='text-brown'>Our <span className='Artisan'>Artisans</span></h3>
                     <p className='text'>Handcrafted by famous artisans 
 in Bat Trang pottery village.</p>
                 </div>
@@ -48,8 +48,8 @@ in Bat Trang pottery village.</p>
                     }
 
                 </div>
-                <div className="text-center">
-    <Link to="/services" className="button view-more-button">View More</Link>
+                <div className=' style button' >
+    <Link to="/services" className=" view-more-button">View More</Link>
 </div>
 
             </div>
