@@ -19,6 +19,7 @@ import Artisan from "../pages/ArtisanPage/artisanpage.jsx";
 import Eventspage from "../pages/EventsPage/eventspage.jsx";
 import Eventdetails from "../pages/singlePageEvent/singlepage.jsx";
 import DetailsEvent from "../pages/DetailsEvent.jsx";
+import Aboutus from "../pages/AboutUs/aboutus.jsx";
 
 const Router = () => {
   // const { user, checkUser } = useContext(UserContext);
@@ -33,6 +34,8 @@ const Router = () => {
              <Route index path="/services" element={<Artisan/>} />
              <Route index path="/workshop" element={<Workshop />} />
              <Route index path="/Events" element={<Eventspage />} />
+             <Route index path="/About" element={<Aboutus />} />
+
 
             {/* <Route index path="/cart" element={<Cart />} />
             <Route index path="/profile" element={<Profile />} />
