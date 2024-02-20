@@ -2,12 +2,14 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { ImageGallery } from '../../components/ImageGallery';
-import Venue from '../../components/eventSECTION/events';
+import Events from '../../components/eventSECTION/events';
+import  Eventdetails from '../singlePageEvent/singlepage';
 
 const Eventspage = () => {
   return (
     <div>
-<Venue/>
+      <Events/>
+      {/* < Eventdetails/> */}
     </div>
   )
 }

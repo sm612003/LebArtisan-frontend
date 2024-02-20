@@ -1,53 +1,53 @@
-// import axios from "axios";
-// import { createContext, useState, useEffect } from "react";
+import axios from "axios";
+import { createContext, useState, useEffect } from "react";
 
-// export const UserContext = createContext();
+export const UserContext = createContext();
 
-// export const UserProvider = ({ children }) => {
-//   const [user, setUser] = useState();
-//   const [checkUser, setCheckUser] = useState(true);
-//   const [userUpdated, setUserUpdated] = useState(false);
+export const UserProvider = ({ children }) => {
+  const [user, setUser] = useState();
+  const [checkUser, setCheckUser] = useState(true);
+  const [userUpdated, setUserUpdated] = useState(false);
 
-//   useEffect(() => {
-//     if (!user || userUpdated) {
-//       fetchUserData();
-//     }
-//   }, [user, userUpdated]);
+  useEffect(() => {
+    if (!user || userUpdated) {
+      fetchUserData();
+    }
+  }, [user, userUpdated]);
 
-//   const fetchUserData = async () => {
-//     try {
-//       setCheckUser(true);
+  const fetchUserData = async () => {
+    try {
+      setCheckUser(true);
 
-//       const response = await axios.get(
-//         `http://localhost:5000/logged-in-user`,
-//         { withCredentials: true }
-//       );
-//       setUser(response.data.user);
-//       setUserUpdated(false); // Reset the flag after updating user
-//     } catch (err) {
-//       setUser(null);
-//       console.log(err);
-//     } finally {
-//       setCheckUser(false);
-//     }
-//   };
+      const response = await axios.get(
+        `http://localhost:5000/logged-in-user`,
+        { withCredentials: true }
+      );
+      setUser(response.data.user);
+      setUserUpdated(false); // Reset the flag after updating user
+    } catch (err) {
+      setUser(null);
+      console.log(err);
+    } finally {
+      setCheckUser(false);
+    }
+  };
 
-//   const logOut = async () => {
-//     await axios.post(`http://localhost:5000/logout`);
-//     setUser(null);
-//   };
+  const logOut = async () => {
+    await axios.post(`http://localhost:5000/logout`);
+    setUser(null);
+  };
 
-//   return (
-//     <UserContext.Provider
-//       value={{
-//         user,
-//         setUser,
-//         logOut,
-//         fetchUserData,
-//         checkUser,
-//         setUserUpdated,
-//       }}>
-//       {children}
-//     </UserContext.Provider>
-//   );
-// };
+  return (
+    <UserContext.Provider
+      value={{
+        user,
+        setUser,
+        logOut,
+        fetchUserData,
+        checkUser,
+        setUserUpdated,
+      }}>
+      {children}
+    </UserContext.Provider>
+  );
+};

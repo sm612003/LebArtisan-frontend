@@ -17,6 +17,8 @@ import ProductDetail from "../pages/portfolioArtisan/portfolio.jsx";
 import Layout from "./Layout.jsx";
 import Artisan from "../pages/ArtisanPage/artisanpage.jsx";
 import Eventspage from "../pages/EventsPage/eventspage.jsx";
+import Eventdetails from "../pages/singlePageEvent/singlepage.jsx";
+import DetailsEvent from "../pages/DetailsEvent.jsx";
 
 const Router = () => {
   // const { user, checkUser } = useContext(UserContext);
@@ -45,6 +47,8 @@ const Router = () => {
           <Route path="/login" element={<Login />} />
           <Route path='/blog/:id' element={<Blog />} />
           <Route path="/product/:productId" element={<ProductDetail/>} /> {/* Define route for product detail */}
+          <Route path="/single-page" element={<DetailsEvent/>} /> {/* Define route for product detail */}
+
 
         
           {/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
