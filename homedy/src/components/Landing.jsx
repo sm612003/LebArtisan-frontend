@@ -28,7 +28,7 @@ const Landing = ({ setSelectedPage }) => {
         ) : (
           <img
             alt="profile"
-            className="z-10 w-full max-w-[400px] md:max-w-[600px] "
+            className="z-10 w-full max-w-[400px] md:max-w-[600px] border border-blue border-t-0 border-l-0 border-r-0 rounded-t-[400px] "
             src={img}
           />
         )}
@@ -47,7 +47,7 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start" style={{ color:'white'}}>
+<p className="text-6xl font-playfair z-10 text-center md:text-start" style={{ color:'#0E4D4F', marginLeft: '100px' }}>
             Leb {""}
             <span
               className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
@@ -57,7 +57,7 @@ const Landing = ({ setSelectedPage }) => {
             </span>
           </p>
 
-          <p className="mt-10 mb-7 text-sm text-center md:text-start" style={{ fontSize: '23px',letterSpacing:'5px',lineHeight:'40px' , color:'white'}}>
+          <p className="mt-10 mb-7 text-sm text-center md:text-start" style={{ fontSize: '23px',letterSpacing:'5px',lineHeight:'40px' , color:'white',marginLeft: '100px'}}>
   your gateway to discovering and supporting the rich tapestry of Lebanese craftsmanship. At LebArtisan Connect, we are passionate about celebrating the creativity, skill, and cultural heritage of local artisans across Lebanon."
 </p>
 

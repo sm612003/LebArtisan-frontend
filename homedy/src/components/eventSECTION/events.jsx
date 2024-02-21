@@ -6,7 +6,6 @@ import '../eventSECTION/event.css'
     return (
         <section className="venue" id="venue">
             <div className="title">
-                <h1><span>V</span>enues</h1>
             </div>
             <div className="venue-list">
                 <div className="venue-box">
