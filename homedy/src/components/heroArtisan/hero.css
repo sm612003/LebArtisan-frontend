@@ -8,6 +8,7 @@
 .hero .box {
   position: relative;
   padding: 30px;
+  
 }
 .hero img {
   width: 100%;
@@ -24,6 +25,7 @@
   grid-template-rows: repeat(8, 6.6vh);
   grid-gap: 10px;
   max-width: 100%;
+  
 }
 .hero .box:nth-child(1) {
   grid-column-start: 1;

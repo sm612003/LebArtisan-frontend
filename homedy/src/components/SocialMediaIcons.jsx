@@ -13,22 +13,8 @@ const SocialMediaIcons = () => {
       >
         <img alt="linkedin-link" src={link} />
       </a>
-      <a
-        className="hover:opacity-50 transition duration-500"
-        href="https://www.twitter.com"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img alt="twitter-link" src={twitter} />
-      </a>
-      <a
-className="hover:opacity-50 transition duration-500 text-red-500"
-href="https://www.facebook.com"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img alt="facebook-link" src={facebook}/>
-      </a>
+   
+   
       <a
 className="hover:opacity-50 transition duration-500 text-red-500"
 href="https://www.instagram.com"
