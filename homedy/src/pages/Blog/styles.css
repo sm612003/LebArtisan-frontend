@@ -1,4 +1,4 @@
-.blog-wrap {
+/* .blog-wrap {
   max-width: 700px;
   margin: 0 auto;
 }
@@ -35,4 +35,95 @@
 .blog-desc {
   padding: 1rem;
   margin-top: 1.5rem;
+} */
+
+/* styles.css */
+
+/* Other styles */
+/* here i add a margin to the containner to aligne  with the logo  */
+.about_achievements {
+  margin-top: 8rem;
+  /* margin-right:400px; */
 }
+
+.about_achievement-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 5rem;
+}
+
+.about_achievements-right > p {
+  margin: 1.6rem 0 2.5rem;
+}
+
+.achievements_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.imagedetail{
+  margin-top: 3rem;
+}
+.achievement_card {
+  padding: 1.6rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.achievement_card:hover {
+  background: #F2EEE8;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}
+
+.achievement_icon {
+  padding: 0.6rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: white; /* Set icon color to white */
+}
+
+/* Set background colors for each achievement card */
+.achievement_card:nth-child(1) .achievement_icon {
+  background: #0E4D4F; /* People - Red background */
+}
+
+.achievement_card:nth-child(2) .achievement_icon {
+  background: #94edd0; /* Date - Blue background */
+}
+
+.achievement_card:nth-child(3) .achievement_icon {
+  background: #5c5c4c; /* Cost - Green background */
+}
+.achievement_card:nth-child(4) .achievement_icon {
+  background: rgb(124, 236, 124); /* Cost - Green background */
+}
+/* styles.css */
+
+/* Other styles */
+
+
+/* Other styles */
+
+
+/* styles.css */
+
+/* Other styles */
+
+.achievement_card .nonetext h3,
+.achievement_card .nonetext p {
+  text-decoration: none !important; 
+}
+
+/* Other styles */
+
+/* Set styles for title and paragraph within achievement_icon */
+.achievement_icon h3,
+.achievement_icon p {
+  color: white; /* Set text color to white */
+  margin: 0; /* Remove default margin */
+}
+
+/* Other styles */

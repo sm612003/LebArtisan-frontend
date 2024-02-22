@@ -8,7 +8,8 @@ const WorkProcess = () => {
       <div className='container'>
         <div className='workprocess-content'>
             <div className='section-title'>
-                <h3 className='text-brown'>working <span className='text-dark'>process</span></h3>
+                <span className="text-red" style={{ color: '#0E4D4F',fontSize:'50px' }}>Materials</span>
+
                 <p className='text'>I offer the right solutions for your digital business.</p>
             </div>
 

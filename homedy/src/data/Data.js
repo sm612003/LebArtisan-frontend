@@ -147,19 +147,19 @@ export const sliderdata = [
 ];
  export const work_process = [
   {
-      title: " a bare lampshade",
+      title: " A bare lampshade",
       paragraph: "Nunc sodales lacus nec felis suscipit dictum"
   },
   {
-      title: " a yarn needle, ",
+      title: " A yarn needle, ",
       paragraph: "Nunc sodales lacus nec felis suscipit dictum"
   },
   {
-      title: " a colored electrical cable,",
+      title: " A colored electrical cable,",
       paragraph: "Nunc sodales lacus nec felis suscipit dictum"
   },
   {
-      title: " a lamp socket,",
+      title: " A lamp socket,",
       paragraph: "Nunc sodales lacus nec felis suscipit dictum"
   },
 

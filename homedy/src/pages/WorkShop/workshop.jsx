@@ -37,7 +37,7 @@ const Workshop = () => {
     <div>
         <HeroSectionHomepage/>
             {/* Page Header */}
-      <Header />
+      {/* <Header /> */}
           {/* Search Bar */}
     <SearchBar
         value={searchKey}

@@ -29,6 +29,8 @@ const Router = () => {
         <Routes>
           <Route element={<Layout />}>
              <Route path="/" element={<Home />} />
+             <Route path='/work' element={<Blog/>} />
+
             {/* /* <Route index path="/confirmed" element={<ConfirmationPage />} /> */}
              {/* <Route path="/product" element={<Products />} /> */}
              <Route index path="/services" element={<Artisan/>} />
@@ -37,18 +39,11 @@ const Router = () => {
              <Route index path="/About" element={<Aboutus />} />
 
 
-            {/* <Route index path="/cart" element={<Cart />} />
-            <Route index path="/profile" element={<Profile />} />
-            <Route index path="/summary" element={<Summary />} />
-            <Route path="/productdetails/:slug" element={<ProductDetails />} />
-            <Route path="/about" element={<Aboutus />} />
-            <Route path="/developers" element={<PoweredByUS />} />
-            <Route path="/checkout" element={<Checkout />} />    */}
+        
           </Route>
 
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path='/blog/:id' element={<Blog />} />
           <Route path="/product/:productId" element={<ProductDetail/>} /> {/* Define route for product detail */}
           <Route path="/single-page" element={<DetailsEvent/>} /> {/* Define route for product detail */}
 

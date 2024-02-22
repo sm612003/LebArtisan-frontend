@@ -3,7 +3,6 @@ export const blogList = [
     id: 1,
     title: '7 CSS tools you should be using ',
     category: 'development',
-    subCategory: ['frontend', 'ui/ux', 'design'],
     description:"Want to immerse yourself in a creative universe full of softness and cozy wool? Discover artisanal weaving techniques using so much more than a standard loom and create a dazzling lampshade to brighten up any room. The possibilities are endless! In this online course, develop elaborate designs and master circular weaving techniques using thick rope and tufting wool to create a beautiful ceiling lampshades.",
     authorName: 'John Doe',
     authorAvatar: '/assets/images/author.jpg',
@@ -15,7 +14,6 @@ export const blogList = [
     id: 2,
     title: 'Learn how to create a contemporary circular lampshade woven with thick rope and tufted wool',
     category: 'travel',
-    subCategory: ['vacation', 'holidays', 'sight seeing'],
     description:
       "Want to immerse yourself in a creative universe full of softness and cozy wool? Discover artisanal weaving techniques using so much more than a standard loom and create a dazzling lampshade to brighten up any room. The possibilities are endless!  In this online course, develop elaborate designs and master circular weaving techniques using thick rope and tufting wool to create a beautiful ceiling lampshades.",
     authorName: 'John Doe',
@@ -28,7 +26,6 @@ export const blogList = [
     id: 3,
     title: 'Online Shopping – An Alternative to Shopping in the Mall',
     category: 'shopping',
-    subCategory: ['e-commerce store', 'clothing', 'shopping store'],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     authorName: 'John Doe',
@@ -42,7 +39,6 @@ export const blogList = [
     title: 'ADVENTURE IN YOU',
     category: 'adventure',
     titltwo:'Who is this online course for ?',
-    subCategory: ['adrenaline', 'stay-fit', 'lifestyle'],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     authorName: 'John Doe',
@@ -56,7 +52,6 @@ export const blogList = [
     titltwo:'Who is this online course for ?',
 
     category: 'cooking',
-    subCategory: ['bbq', 'food', 'lifestyle'],
     description:
     "  Lorem Ipsum is simply dummy text of the printing and typesetting industry."  ,
         authorName: 'John Doe',
@@ -70,7 +65,6 @@ export const blogList = [
     titltwo:'Who is this online course for ?',
 
     category: 'travel',
-    subCategory: ['beaches', 'sea', 'holidays'],
     description:
   "  Lorem Ipsum is simply dummy text of the printing and typesetting industry."   ,
    authorName: 'John Doe',
@@ -85,7 +79,6 @@ export const blogList = [
     titltwo:'Who is this online course for ?',
 
     category: 'art',
-    subCategory: ['skill', 'design', 'passion'],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     authorName: 'John Doe',
