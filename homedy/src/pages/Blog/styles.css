@@ -63,6 +63,8 @@
 }
 .imagedetail{
   margin-top: 3rem;
+  height: 81%;
+    max-width: 110%;
 }
 .achievement_card {
   padding: 1.6rem;
