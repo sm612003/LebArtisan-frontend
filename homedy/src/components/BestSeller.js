@@ -43,6 +43,7 @@ const Category = () => {
     }
   };
   
+  
 
   return (
     <div className="bg-white mt-16 text-center">
@@ -67,19 +68,22 @@ const Category = () => {
       {artists.map((artist, index) => (
   <div key={index} className="relative">
     <div className="m-4 relative group">
-      <Link to={`/product/${artist.userId._id}`}>
-        <img
-          src={`${process.env.REACT_APP_BACKEND}/${artist.userImage || artist.userId.image}`}
-          alt={artist.BrandName}
-          className="mx-auto h-full w-full hover:shadow-md transition-all duration-300 bg-cover"
-        />
-      </Link>
+      {artist.userId && (
+        <Link to={`/product/${artist.userId._id}`}>
+          <img
+            src={`${process.env.REACT_APP_BACKEND}/${artist.userImage || artist.userId.image}`}
+            alt={artist.BrandName}
+            className="mx-auto h-full w-full hover:shadow-md transition-all duration-300 bg-cover"
+          />
+        </Link>
+      )}
       <div className="mt-4">
         <div className="font-semibold uppercase">{artist.BrandName}</div>
       </div>
     </div>
   </div>
 ))}
+
 
       </div>
     </div>

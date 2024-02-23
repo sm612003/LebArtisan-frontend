@@ -23,10 +23,12 @@ const WorkshopList = ({ workshops }) => {
   return (
     <div className='blogList-wrap'>
       {workshops.map((workshop) => (
-        <WorkshopItem workshop={workshop} key={workshop._id} categoryTitle={workshop.categoryTitle} /> 
+        <WorkshopItem workshop={workshop} key={workshop._id} /> 
       ))}
     </div>
   );
 };
+
+
 
 export default WorkshopList;

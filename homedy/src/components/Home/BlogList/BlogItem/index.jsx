@@ -50,14 +50,14 @@ const WorkshopItem = ({
     artistName,
     artistImage,
     image,
-    _id,
-    categoryTitle, // Include categoryTitle from props
+    _id, // Add _id
+    categoryTitle,
   },
 }) => {
   return (
     <div className='blogItem-wrap'>
       <img className='blogItem-cover' src={`${process.env.REACT_APP_BACKEND}/${image}`} alt='workshop cover' />
-      <Chip label={categoryTitle} /> {/* Display categoryTitle using Chip component */}
+      <Chip label={categoryTitle} />
       <h3>{title}</h3>
       <p className='blogItem-desc'>{description}</p>
       <footer>
@@ -67,9 +67,11 @@ const WorkshopItem = ({
             <h6>{artistName}</h6>
           </div>
         </div>
-        <Link className='blogItem-link' to={`/workshop/${_id}`}>
+    {/* Use Link component with workshop ID */}
+    <Link className='blogItem-link' to={`/workshop/${_id}`}>
           ➝
         </Link>
+
       </footer>
     </div>
   );

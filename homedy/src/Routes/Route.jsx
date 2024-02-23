@@ -20,6 +20,7 @@ import Eventspage from "../pages/EventsPage/eventspage.jsx";
 import Eventdetails from "../pages/singlePageEvent/singlepage.jsx";
 import DetailsEvent from "../pages/DetailsEvent.jsx";
 import Aboutus from "../pages/AboutUs/aboutus.jsx";
+import WorkshopDetails from "../pages/Blog/index.jsx";
 
 const Router = () => {
   // const { user, checkUser } = useContext(UserContext);
@@ -29,12 +30,14 @@ const Router = () => {
         <Routes>
           <Route element={<Layout />}>
              <Route path="/" element={<Home />} />
-             <Route path='/work' element={<Blog/>} />
 
             {/* /* <Route index path="/confirmed" element={<ConfirmationPage />} /> */}
              {/* <Route path="/product" element={<Products />} /> */}
              <Route index path="/services" element={<Artisan/>} />
              <Route index path="/workshop" element={<Workshop />} />
+        <Route  exact path="/workshop/:id" element={<WorkshopDetails/>} />
+
+
              <Route index path="/events" element={<Eventspage />} />
              <Route index path="/About" element={<Aboutus />} />
                 {/* Route to render single event details based on the event ID */}
