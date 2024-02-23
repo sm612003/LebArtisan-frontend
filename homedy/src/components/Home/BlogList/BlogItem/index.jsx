@@ -1,35 +1,73 @@
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+// import Chip from '../../../../common/Chip/index';
+// import './styles.css';
+
+// const BlogItem = ({
+//   blog: {
+//     description,
+//     title,
+//     createdAt,
+//     authorName,
+//     authorAvatar,
+//     cover,
+//     category,
+//     id,
+//   },
+// }) => {
+//   return (
+//     <div className='blogItem-wrap'>
+//       <img className='blogItem-cover' src={cover} alt='cover' />
+//       <Chip label={category} />
+//       <h3>{title}</h3>
+//       <p className='blogItem-desc'>{description}</p>
+//       <footer>
+//         <div className='blogItem-author'>
+//           <img src={authorAvatar} alt='avatar' />
+//           <div>
+//             <h6>{authorName}</h6>
+//             <p>{createdAt}</p>
+//           </div>
+//         </div>
+//         <Link className='blogItem-link' to={`/blog/${id}`}>
+//           ➝
+//         </Link>
+//       </footer>
+//     </div>
+//   );
+// };
+
+// export default BlogItem;
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Chip from '../../../../common/Chip/index';
 import './styles.css';
 
-const BlogItem = ({
-  blog: {
-    description,
+const WorkshopItem = ({
+  workshop: {
     title,
-    createdAt,
-    authorName,
-    authorAvatar,
-    cover,
-    category,
-    id,
+    description,
+    artistName,
+    artistImage,
+    image,
+    _id,
+    categoryTitle, // Include categoryTitle from props
   },
 }) => {
   return (
     <div className='blogItem-wrap'>
-      <img className='blogItem-cover' src={cover} alt='cover' />
-      <Chip label={category} />
+      <img className='blogItem-cover' src={`${process.env.REACT_APP_BACKEND}/${image}`} alt='workshop cover' />
+      <Chip label={categoryTitle} /> {/* Display categoryTitle using Chip component */}
       <h3>{title}</h3>
       <p className='blogItem-desc'>{description}</p>
       <footer>
         <div className='blogItem-author'>
-          <img src={authorAvatar} alt='avatar' />
+          <img src={`${process.env.REACT_APP_BACKEND}/${artistImage}`} alt='artist avatar' />
           <div>
-            <h6>{authorName}</h6>
-            <p>{createdAt}</p>
+            <h6>{artistName}</h6>
           </div>
         </div>
-        <Link className='blogItem-link' to={`/blog/${id}`}>
+        <Link className='blogItem-link' to={`/workshop/${_id}`}>
           ➝
         </Link>
       </footer>
@@ -37,4 +75,4 @@ const BlogItem = ({
   );
 };
 
-export default BlogItem;
+export default WorkshopItem;

@@ -90,7 +90,7 @@ export default function Header() {
                 {/* NavLink for About Us */}
                 <li >
 
-                  <NavLink to='/Events' activeclassname={styles.activeLink} className={`${styles.menuItem} ${location.pathname === '/Events' ? styles.activeNavItem : ''} ${location.pathname === '/checkout' || location.pathname === '/confirmed' || location.pathname === '/developers' || location.pathname === '/profile' || location.pathname === "/cart" ? styles.blue : styles.white}`}>
+                  <NavLink to='/events' activeclassname={styles.activeLink} className={`${styles.menuItem} ${location.pathname === '/events' ? styles.activeNavItem : ''} ${location.pathname === '/checkout' || location.pathname === '/confirmed' || location.pathname === '/developers' || location.pathname === '/profile' || location.pathname === "/cart" ? styles.blue : styles.white}`}>
                     Events                </NavLink>
                 </li>
 

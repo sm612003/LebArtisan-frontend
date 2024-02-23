@@ -35,9 +35,10 @@ const Router = () => {
              {/* <Route path="/product" element={<Products />} /> */}
              <Route index path="/services" element={<Artisan/>} />
              <Route index path="/workshop" element={<Workshop />} />
-             <Route index path="/Events" element={<Eventspage />} />
+             <Route index path="/events" element={<Eventspage />} />
              <Route index path="/About" element={<Aboutus />} />
-
+                {/* Route to render single event details based on the event ID */}
+                <Route exact path="/event/:eventId" element={<DetailsEvent/>} />
 
         
           </Route>
@@ -45,7 +46,6 @@ const Router = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/product/:productId" element={<ProductDetail/>} /> {/* Define route for product detail */}
-          <Route path="/single-page" element={<DetailsEvent/>} /> {/* Define route for product detail */}
 
 
         

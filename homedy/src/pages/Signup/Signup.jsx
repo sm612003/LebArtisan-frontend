@@ -30,30 +30,36 @@ const Signup = () => {
     console.log(formData)
 
   }
-  const handleImageChange = (e)=>{
-    console.log(e.target.files[0])
-    setFormData((prev)=>({
+  const handleImageChange = (e) => {
+
+    const file = e.target.files[0];
+    setFormData((prev) => ({
       ...prev,
-      image:e.target.files[0]
-    }))
-    console.log(formData)
-  }
+      image: file,
+    }));
+  };
+  
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData)
     try {
-      const response = await axios.post(`http://localhost:5000/user/register`, formData,{withCredentials:true},{headers: {'Content-Type': 'multipart/form-data'}})
+      const response = await axios.post(`http://localhost:5000/user/register`,
+       formData,
+       { withCredentials: true, headers: { 'Content-Type': 'multipart/form-data' } }
+      );
       if(response.data){
         setUser(response.data)
         console.log(response.data)
       }
       console.log (response);
       navigate("/");
+      // Handle response
     } catch (error) {
       console.log(error.message);
     }
   };
+  
   return (
     <div className={styles.background}>
 

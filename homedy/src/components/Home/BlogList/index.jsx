@@ -1,15 +1,32 @@
+// import React from 'react';
+// import BlogItem from './BlogItem';
+// import './styles.css';
+
+// const BlogList = ({ blogs }) => {
+//   return (
+//     <div className='blogList-wrap'>
+//       {blogs.map((blog) => (
+//         <BlogItem blog={blog} />
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default BlogList;
+
+
 import React from 'react';
-import BlogItem from './BlogItem';
+import WorkshopItem from './BlogItem';
 import './styles.css';
 
-const BlogList = ({ blogs }) => {
+const WorkshopList = ({ workshops }) => {
   return (
     <div className='blogList-wrap'>
-      {blogs.map((blog) => (
-        <BlogItem blog={blog} />
+      {workshops.map((workshop) => (
+        <WorkshopItem workshop={workshop} key={workshop._id} categoryTitle={workshop.categoryTitle} /> 
       ))}
     </div>
   );
 };
 
-export default BlogList;
+export default WorkshopList;
