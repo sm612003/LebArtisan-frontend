@@ -14,14 +14,19 @@ const Category = () => {
 
   const fetchArtists = async () => {
     try {
-      const response = await fetch("http://localhost:5000/artist/artists");
+      const response = await fetch("http://localhost:5000/artist/byName");
+      if (!response.ok) {
+        throw new Error('Failed to fetch artists');
+      }
       const data = await response.json();
       setAllArtists(data);
       setArtists(data); // Initially, set all artists to be shown
     } catch (error) {
       console.error("Error fetching artists:", error);
+      // Handle the error gracefully, e.g., show an error message to the user
     }
   };
+  
 
   const fetchCategories = async () => {
     try {
@@ -35,7 +40,7 @@ const Category = () => {
 
   const filterItems = async (categoryId) => {
     try {
-      const response = await fetch(`http://localhost:5000/artist/${categoryId}`);
+      const response = await fetch(`http://localhost:5000/artist/ByCategory/${categoryId}`);
       const data = await response.json();
       setArtists(data);
     } catch (error) {
@@ -69,7 +74,7 @@ const Category = () => {
   <div key={index} className="relative">
     <div className="m-4 relative group">
       {artist.userId && (
-        <Link to={`/product/${artist.userId._id}`}>
+        <Link to={`/product/${artist._id}`}>
           <img
             src={`${process.env.REACT_APP_BACKEND}/${artist.userImage || artist.userId.image}`}
             alt={artist.BrandName}

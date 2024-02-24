@@ -48,7 +48,7 @@ const Router = () => {
 
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/product/:productId" element={<ProductDetail/>} /> {/* Define route for product detail */}
+          <Route path="/product/:artistId" element={<ProductDetail />} />
 
 
         
