@@ -19,11 +19,18 @@
   color: #ff5d1d;
 }
 
-.contact-us-container {
+.container {
   position: relative;
 }
 
-.sticky-background {
+.textContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.stickyBackground {
   position: fixed;
   top: 0;
   left: 0;
@@ -33,11 +40,11 @@
   pointer-events: none;
 }
 
-.sticky-background img {
+.image {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
+
 .top-icon svg {
   padding: 10px;
 }

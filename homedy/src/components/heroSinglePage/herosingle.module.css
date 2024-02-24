@@ -1,13 +1,14 @@
 .containerHero {
     margin: 0;
     position: relative;
+    z-index: 1000;
 }
 
 .backgroundImage {
         /* position: absolute; */
 width: 100%;
 /* top: -370px; */
-height: 730px;
+height: 100vh;
 background-image: url(/src/assets/unsplash_L5NhPcGhsSM.png);
 background-size: cover;
 background-repeat: no-repeat;

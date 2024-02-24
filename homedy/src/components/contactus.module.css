@@ -14,8 +14,11 @@
     transition: all .4s ease;
 }
 .button:hover{
-    color: #70908B ;
     border: 1px solid #70908B;
     background-color: transparent;
 
+
 }
+ a:hover{
+    color: #70908B  !important;
+ }

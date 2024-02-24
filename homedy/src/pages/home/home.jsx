@@ -7,7 +7,7 @@ import HeroSectionHomepage from "../../components/HeroSection/HeroSection";
 import { SearchResultsList } from "../../components/searchlist/searchlist";
 import About from '../../components/About/About';
 import styles, { layout } from "../../style.js";
-import Arrival from '../../components/Arrival.js';
+import  ImageSlider from '../../components/Arrival.js';
 import Testimonials  from '../../components/Testimonials/Testimonials.jsx';
 import  Work  from '../../components/Work/Work.jsx'
 
@@ -31,7 +31,7 @@ export default function Home() {
 <Work/>
 <Testimonials/>
 
-<Arrival />
+< ImageSlider />
 
 {/* <ImageGrid /> */}
     </div>
