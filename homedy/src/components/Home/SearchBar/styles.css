@@ -15,11 +15,14 @@
   background-color: #f0f0f0;
   outline: none;
   border: none;
+  text-align: center;
+    margin-top: 12px
 }
 
 .searchBar-wrap span {
   padding-right: 0.5rem;
   cursor: pointer;
+  margin-top: 12px;
 }
 
 .searchBar-wrap button {

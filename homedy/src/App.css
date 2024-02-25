@@ -174,7 +174,7 @@ img{
 /* section title */
 .section-title{
   text-align: center;
-  margin-bottom: 3.8rem;
+  margin-bottom: 2.8rem;
 
 }
 .section-title h3{
@@ -186,7 +186,7 @@ img{
 
 @media screen and (min-width: 768px){
   .section-title h3{
-    font-size: 3.6rem;
+    font-size: 2.6rem;
   }
 }
 

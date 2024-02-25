@@ -50,6 +50,8 @@
 }
 svg {
   margin: 0 !important;
+  margin-top: 15px !important;
+  margin-left: 5px !important;
 }
 
 .sidebar-container {

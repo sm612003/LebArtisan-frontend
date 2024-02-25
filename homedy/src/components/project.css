@@ -18,3 +18,26 @@
 .overlay-container:hover {
   opacity: 0.9; /* Change opacity to 0.9 when hovering */
 }
+.button a {
+  width: fit-content;
+  text-align: center;
+  color: white !important;
+  text-decoration: none !important;
+  background-color: #70908B;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  /* margin-top: 2rem; */
+  height: 11%;
+  font-size: 16px;
+  font-weight: 400px;
+  padding: 10px 36px;
+  transition: all .4s ease;
+}
+.view-more-button:hover {
+  color: white !important;
+}
+
+.style{
+  margin-top: 50px;
+}
+

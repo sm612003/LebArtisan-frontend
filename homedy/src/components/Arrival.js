@@ -355,12 +355,13 @@ const ImageSlider = () => {
         console.error("Error fetching events:", error);
       }
     };
-
+  
     fetchEvents();
-
+  
     const interval = setInterval(handleNext, 2000);
     return () => clearInterval(interval);
   }, []);
+  
 
   const handleNext = () => {
     if (events.length > 0) {
@@ -383,8 +384,14 @@ const ImageSlider = () => {
   return (
     <div className="flex flex-col items-center justify-center \ h-screen relative overflow-hidden" style={{backgroundColor:'#E1E1E0'}}>
       <div className="mb-8 text-center">
-        <h2 className="text-xl font-bold" style={{ marginTop: '50px', fontSize: '40px' }}>Upcoming Events</h2>
-        <p style={{ marginTop: '50px', fontSize: '20px' }}>Discover our upcoming events and mark your calendars!</p>
+      <p className="font-playfair font-semibold text-4xl" style={{marginTop:'50px',color:'#8B8B8B'}} >
+                        <span className="text-red" style={{ color: '#0E4D4F'  }}>Upcoming </span>Events
+                    </p>
+
+                    <div className="flex justify-center mt-5">
+                        <div style={{ borderBottom: '2px solid #6C9192', width: '66.67%' }} />
+                    </div>
+        <p style={{ marginTop: '50px', fontSize: '25px',color:'#8B8B8B' }}>Discover our upcoming events and mark your calendars!</p>
       </div>
       <div className="slider-container" style={{ width: "70%", height: "90%", position: "relative", marginBottom: '300px', marginRight: '30%' }}>
         {events.map((event, index) => (

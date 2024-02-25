@@ -1,67 +1,8 @@
-// import React, {useState} from 'react';
-// import {works} from "../../constants/data";
-// import "./Work.css";
-// import {BsPlusLg} from "react-icons/bs";
-// import {ImCancelCircle} from "react-icons/im";
-// import { Link } from 'react-router-dom';
 
-// const Work = () => {
-//     const [imageModal, setImageModal] = useState(false);
-//     const [imageSource, setImageSource] = useState("");
-
-//     const setImageOnModal = (src) => {
-//         setImageModal(true);
-//         setImageSource(src);
-//     }
-
-//   return (
-//     <div className='work section-p bg-grey' id = "work">
-//         <div className={imageModal ? "image-box show-image-box" : "image-box"}>
-//             <div className='image-box-content'>
-//                 <img src = {imageSource} alt = "" />
-//                 <span className='image-box-close-btn' onClick={() => setImageModal(false)}>
-//                     <ImCancelCircle size = {30} className = "text"  />
-//                 </span>
-//             </div>
-//         </div>
-
-//         <div className='container'>
-//             <div className='work-content'>
-//                 <div className='section-title'>
-//                     <h3 className='text-brown'>Our <span className='Artisan'>Artisans</span></h3>
-//                     <p className='text'>Handcrafted by famous artisans 
-// in Bat Trang pottery village.</p>
-//                 </div>
-
-//                 <div className='work-list grid'>
-//                     {
-//                         works.map((work, index) => {
-//                             return (
-//                                 <div className='work-item text-center' key = {index} onClick = {() => setImageOnModal(work.image)}>
-//                                     <img src = {work.image} alt = "" />
-//                                     <span className='work-item-icon'>
-//                                         <BsPlusLg size = {38} className = "text" />
-//                                     </span>
-//                                 </div>
-//                             )
-//                         })
-//                     }
-
-//                 </div>
-//                 <div className=' style button' >
-//     <Link to="/services" className=" view-more-button">View More</Link>
-// </div>
-
-//             </div>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default Work
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../project.css';
+import { Link } from 'react-router-dom';
 
 const container = {
     hidden: {},
@@ -82,6 +23,7 @@ const Project = ({ projectData }) => {
 
     const overlayStyles = `absolute h-full w-full overlay-container hover:opacity-90 transition duration-500
     bg-gray-200 bg-opacity-90 z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+    ;
 
     const handleHover = (event) => {
         const overlay = event.currentTarget.querySelector('.hover-overlay');
@@ -94,14 +36,14 @@ const Project = ({ projectData }) => {
     };
 
     return (
-        <motion.div variants={projectVariant} className="relative w-full h-full" onMouseEnter={handleHover} onMouseLeave={handleHoverOut}>
+        <motion.div variants={projectVariant} className="relative" onMouseEnter={handleHover} onMouseLeave={handleHoverOut}>
             <div className={`${overlayStyles}`}>
                 <p className="text-2xl font-playfair">{BrandName}</p>
                 <p className="mt-7 hover-overlay" style={{ opacity: '0' }}>
                     {about_us.description}
                 </p>
             </div>
-            <img src={`${process.env.REACT_APP_BACKEND}/${userImage}`} alt={BrandName} className="w-full h-full object-cover" />
+            <img src={`${process.env.REACT_APP_BACKEND}/${userImage}`} alt={BrandName} className=" p-10 transition-opacity duration-500"  style={{maxHeight:'400px',maxWidth:'400px'}}/>
         </motion.div>
     );
 };
@@ -117,7 +59,9 @@ const Projects = () => {
                 const response = await fetch('http://localhost:5000/artist/byName');
                 if (response.ok) {
                     const data = await response.json();
-                    setProjects(data);
+                    // Limiting to only 6 artists
+                    const limitedData = data.slice(0, 5);
+                    setProjects(limitedData);
                 } else {
                     console.error('Failed to fetch projects');
                 }
@@ -125,13 +69,43 @@ const Projects = () => {
                 console.error('Error fetching projects:', error);
             }
         };
-
+    
         fetchProjects();
     }, []);
+    
 
     return (
         <section id="projects" className="pt-48 pb-48">
-            {/* HEADINGS and other content */}
+            {/* HEADINGS */}
+            <motion.div
+                className="md:w-2/5 mx-auto text-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                    hidden: { opacity: 0, y: -50 },
+                    visible: { opacity: 1, y: 0 },
+                }}
+            >
+                <div>
+
+                    <p className="font-playfair font-semibold text-4xl">
+                        <span className="text-red" style={{ color: '#0E4D4F' }}>TALENTED</span> ARTISANS
+                    </p>
+
+                    <div className="flex justify-center mt-5">
+                        <div style={{ borderBottom: '2px solid #6C9192', width: '66.67%' }} />
+                    </div>
+
+
+                </div>
+                <p className="mt-10 mb-10" style={{fontSize:'20px'}}>
+    Discover our talented artisans who bring creativity and skill to every project. 
+    From innovative designs to masterful craftsmanship, our artisans 
+    infuse passion into their work, creating unique and exceptional experiences for you.
+</p>
+            </motion.div>
             <div className="flex justify-center">
                 <motion.div
                     className="sm:grid sm:grid-cols-3"
@@ -140,11 +114,23 @@ const Projects = () => {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                 >
+                    {/* ROW 1 */}
+                    <div
+                        className="flex justify-center text-center items-center p-10  max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+                        style={{ backgroundColor: '#6C9192' }}
+                    >
+                        BEAUTIFUL USER INTERFACES
+                    </div>
                     {projects.map((project, index) => (
                         <Project key={index} projectData={project} />
                     ))}
                 </motion.div>
+ 
             </div>
+            <div className='style button' style={{ marginLeft: '45%' }}>
+    <Link to="/services" className="view-more-button" style={{ textDecoration: 'none' }}>View More</Link>
+</div>
+
         </section>
     );
 };

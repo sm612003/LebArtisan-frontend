@@ -124,9 +124,62 @@
 
 // export default About;
 
+// import React, { useRef, useState } from 'react';
+// import { FaPlay } from "react-icons/fa";
+// import ReactPlayer from 'react-player';
+// import "./About.css";
+
+// const About = ({ title, description, videoUrl }) => {
+//     const [isPlaying, setIsPlaying] = useState(false);
+
+//     const togglePlay = () => {
+//         setIsPlaying(!isPlaying);
+//     };
+
+//     // Construct the video URL
+//     const constructedVideoUrl = `${process.env.REACT_APP_BACKEND}/${videoUrl}`;
+
+//     // Log the constructed video URL to the console
+//     console.log("Constructed Video URL:", constructedVideoUrl);
+
+//     return (
+//         <div className='about section-p'>
+//             <div className='container'>
+//                 <div className='about-content'>
+//                     <div className='about-grid grid'>
+//                         <div className='section-title'>
+//                             <h3 style={{color:'red'}} className='text-brown'>{title}</h3>
+//                             <p className='text mx-auto'>{description}</p>
+//                         </div>
+//                     </div>
+
+//                     <div className='about-grid grid'>
+//                         <div className='section-title'>
+//                             <div className='about-video'>
+//                                 <ReactPlayer
+//                                     light={true}
+//                                     url={constructedVideoUrl}
+//                                     playing={isPlaying}
+//                                     controls={true}
+//                                     width='100%'
+//                                     height='100%'
+//                                 />
+//                                 <button type="button" className='vidPlayBtn flex flex-c' onClick={togglePlay}>
+//                                     <FaPlay className='text-brown' size={28} />
+//                                 </button>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default About;
 import React, { useRef, useState } from 'react';
-import { FaPlay } from "react-icons/fa";
-import "./About.css";
+import { FaPlay } from 'react-icons/fa';
+import "./About.css"; // Import CSS file
 
 const About = ({ title, description, videoUrl }) => {
     const vidRef = useRef(null);
@@ -135,39 +188,30 @@ const About = ({ title, description, videoUrl }) => {
         setToggleVideo(!toggleVideo);
         if(toggleVideo) vidRef.current.play();
         else vidRef.current.pause();
-    }
+    };
 
-    // Log the videoUrl to the console
-    console.log("Video URL:", videoUrl);
     return (
         <div className='about section-p'>
             <div className='container'>
                 <div className='about-content'>
                     <div className='about-grid grid'>
-                        <div className='section-title'>
-                            <h3   style={{color:'red'}}className='text-brown'>{title}</h3>
-                            <p className='text mx-auto'>{description}</p>
-                        </div>
-                    </div>
-
-                    <div className='about-grid grid'>
-                        <div className='section-title'>
                         <div className='about-video'>
-                        <video className='about-video' autoPlay loop ref = {vidRef}>
-                            <source src = {videoUrl} type = "video/mp4" />
-                           
-
-                       </video>
-                        <button type = "button" className='vidPlayBtn flex flex-c' onClick={playVideo}>
-                            <FaPlay className='text-brown' size = {28} />
-                        </button>
-                    </div>
+                            <video className='about-video' autoPlay loop ref={vidRef}>
+                                <source src={`${process.env.REACT_APP_BACKEND}/${videoUrl}`} type='video/mp4' />
+                            </video>
+                            <button type='button' className='vidPlayBtn flex flex-c' onClick={playVideo}>
+                                <FaPlay className='text-brown' size={28} />
+                            </button>
+                        </div>
+                        <div className='section-title'>
+                            <h3 className='text-brown' style={{color:'#0E4D4F' }}>{title}</h3>
+                            <p className='text mx-auto'>{description}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default About;
