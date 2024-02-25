@@ -35,10 +35,11 @@ img{
 }
 .flex{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 .flex-col{
   flex-direction: column;
+  text-align: center;
 }
 .flex-c{
   justify-content: center;

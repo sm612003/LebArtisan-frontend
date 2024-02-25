@@ -10,6 +10,7 @@ import styles, { layout } from "../../style.js";
 import  ImageSlider from '../../components/Arrival.js';
 import Testimonials  from '../../components/Testimonials/Testimonials.jsx';
 import  Work  from '../../components/Work/Work.jsx'
+import Projects from '../../components/Work/Work.jsx';
 
 export default function Home() {
   const [results, setResults] = useState([]);
@@ -28,10 +29,10 @@ export default function Home() {
           {/* <CardSlider/> */}
 {/* <About/> */}
 {/* <Business/> */}
-<Work/>
-<Testimonials/>
+<Projects/>
+{/* <Testimonials/> */}
 
-< ImageSlider />
+{/* < ImageSlider /> */}
 
 {/* <ImageGrid /> */}
     </div>

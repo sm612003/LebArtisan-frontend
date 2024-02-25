@@ -358,7 +358,7 @@ const ImageSlider = () => {
 
     fetchEvents();
 
-    const interval = setInterval(handleNext, 1000);
+    const interval = setInterval(handleNext, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -381,7 +381,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white h-screen relative overflow-hidden">
+    <div className="flex flex-col items-center justify-center \ h-screen relative overflow-hidden" style={{backgroundColor:'#E1E1E0'}}>
       <div className="mb-8 text-center">
         <h2 className="text-xl font-bold" style={{ marginTop: '50px', fontSize: '40px' }}>Upcoming Events</h2>
         <p style={{ marginTop: '50px', fontSize: '20px' }}>Discover our upcoming events and mark your calendars!</p>
