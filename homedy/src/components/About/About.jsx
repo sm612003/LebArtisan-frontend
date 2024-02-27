@@ -204,7 +204,7 @@ const About = ({ title, description, videoUrl }) => {
                             </button>
                         </div>
                         <div className='section-title'>
-                            <h3 className='text-brown' style={{color:'#0E4D4F' }}>{title}</h3>
+                            <h3 className='text-brown' style={{color:'#0E4D4F' , marginTop:'35px',marginBottom:'35px'}}>{title}</h3>
                             <p className='text mx-auto'>{description}</p>
                         </div>
                     </div>

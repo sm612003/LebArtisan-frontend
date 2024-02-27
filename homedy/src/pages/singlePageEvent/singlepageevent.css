@@ -1,0 +1,19 @@
+.btn {
+    width: fit-content;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: #70908B;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    margin-top: 1rem; /* Adjust margin-top for proper spacing */
+    font-size: 20px;
+    font-weight: 400px;
+    padding: 10px 36px;
+    transition: all .4s ease;
+}
+.btn:hover {
+    color: #70908B ;
+    border: 1px solid #70908B;
+    background-color: transparent;
+}

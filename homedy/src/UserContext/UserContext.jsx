@@ -22,7 +22,8 @@ export const UserProvider = ({ children }) => {
         `http://localhost:5000/logged-in-user`,
         { withCredentials: true }
       );
-      setUser(response.data.user);
+      setUser(response.data.data);
+      console.log("userr",response.data.data)
       setUserUpdated(false); // Reset the flag after updating user
     } catch (err) {
       setUser(null);

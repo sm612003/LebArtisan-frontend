@@ -53,16 +53,16 @@ const Category = () => {
   return (
     <div className="bg-white mt-16 text-center">
       <Heading
-        title="Best Seller"
-        description="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY"
+        title="Our Artisans"
+        description="Handmade treasures, where artistry meets soul, bringing beauty into every fold"
       />
       <div className="flex justify-center">
         {/* Render category buttons */}
         {categories.map((category) => (
-          <button
+          <button style={{color:'white',backgroundColor:'#8B8B8B'}}
             key={category._id}
             type="button"
-            className="bg-gray-200 pt-2 pb-2 pl-4 pr-4 mr-2 text-black font-semibold hover:bg-black hover:text-white transition-all duration-300"
+            className="bg-gray-200 pt-2 pb-2 pl-4 pr-4 mr-2  font-semibold hover:bg-black hover:text-white transition-all duration-300"
             onClick={() => filterItems(category._id)}
           >
             {category.title}

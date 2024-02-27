@@ -26,7 +26,7 @@ const Events = () => {
                         <img src={`${process.env.REACT_APP_BACKEND}/${event.image}`} alt={event.title} />
                         <div className="venue-info">
                             <h2>{event.title}</h2>
-                            <p>Date: {new Date(event.date_time).toLocaleDateString()}</p>
+                            <p>Date: {new Date(event.date).toLocaleDateString()}</p>
                             {/* Update the link to include the event ID */}
                             <Link to={`/event/${event._id}`} className="btn">More Info</Link>
                         </div>

@@ -72,7 +72,8 @@
   top: 35px;
   right: 35px;
   cursor: pointer;
-  color: var(--button-background-color-red);
+  color:blueviolet;
+  display: none;
 }
 .white{
 color:#0E4D4F;
@@ -175,6 +176,13 @@ color:#0E4D4F;
   }
 }
 @media screen and (max-width: 768px) {
+  .closeMenu {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    cursor: pointer;
+    color:red;
+  }
   .mobile_btn {
     display: flex;
     color: white;
@@ -231,6 +239,13 @@ color:#0E4D4F;
 }
   .active {
     left: 0;
+  }
+  .closeMenu {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    cursor: pointer;
+    color:red;
   }
 
   .navbar Link {

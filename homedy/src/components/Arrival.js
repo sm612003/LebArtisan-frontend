@@ -358,7 +358,7 @@ const ImageSlider = () => {
   
     fetchEvents();
   
-    const interval = setInterval(handleNext, 2000);
+    const interval = setInterval(handleNext, 1000);
     return () => clearInterval(interval);
   }, []);
   

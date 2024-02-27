@@ -29,29 +29,30 @@ const Router = () => {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-             <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
 
             {/* /* <Route index path="/confirmed" element={<ConfirmationPage />} /> */}
-             {/* <Route path="/product" element={<Products />} /> */}
-             <Route index path="/services" element={<Artisan/>} />
-             <Route index path="/workshop" element={<Workshop />} />
-        <Route  exact path="/workshop/:id" element={<WorkshopDetails/>} />
+            {/* <Route path="/product" element={<Products />} /> */}
+            <Route index path="/services" element={<Artisan />} />
+            <Route path="/product/:artistId" element={<ProductDetail />} />
+
+            <Route index path="/workshop" element={<Workshop />} />
+            <Route exact path="/workshop/:id" element={<WorkshopDetails />} />
 
 
-             <Route index path="/events" element={<Eventspage />} />
-             <Route index path="/About" element={<Aboutus />} />
-                {/* Route to render single event details based on the event ID */}
-                <Route exact path="/event/:eventId" element={<DetailsEvent/>} />
+            <Route index path="/events" element={<Eventspage />} />
+            <Route index path="/About" element={<Aboutus />} />
+            {/* Route to render single event details based on the event ID */}
+            <Route path="/event/:eventId" element={<DetailsEvent />} />
 
-        
+
           </Route>
 
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/product/:artistId" element={<ProductDetail />} />
 
 
-        
+
           {/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
           {/* <Route path="/*" element={<NotFound />} /> */}
 
@@ -62,8 +63,8 @@ const Router = () => {
                 redirectPath="/unauthorized"
               />
             }> */}
-            {/* <Route path="/dashboard" element={<Dashboard />}> */}
-              {/* <Route path="overview" index element={<Overview />} />
+          {/* <Route path="/dashboard" element={<Dashboard />}> */}
+          {/* <Route path="overview" index element={<Overview />} />
               <Route path="category" index element={<CategoryTable />} />
               <Route path="profile" index element={<DashProfile />} />
               <Route path="Product/Add" index element={< AddProduct/>} />

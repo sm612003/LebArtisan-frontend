@@ -43,7 +43,7 @@ const Project = ({ projectData }) => {
                     {about_us.description}
                 </p>
             </div>
-            <img src={`${process.env.REACT_APP_BACKEND}/${userImage}`} alt={BrandName} className=" p-10 transition-opacity duration-500"  style={{maxHeight:'400px',maxWidth:'400px'}}/>
+            <img src={`${process.env.REACT_APP_BACKEND}/${userImage}`} alt={BrandName} className="  transition-opacity duration-500"  style={{maxHeight:'100%',maxWidth:'100%'}}/>
         </motion.div>
     );
 };
@@ -116,10 +116,10 @@ const Projects = () => {
                 >
                     {/* ROW 1 */}
                     <div
-                        className="flex justify-center text-center items-center p-10  max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-                        style={{ backgroundColor: '#6C9192' }}
+                        className="flex justify-center text-center items-center p-10  text-2xl font-playfair font-semibold"
+                        style={{ backgroundColor: '#6C9192',maxHeight:'100%',maxWidth:'100%'}}
                     >
-                        BEAUTIFUL USER INTERFACES
+                        Crafted with passion, each piece tells a story.
                     </div>
                     {projects.map((project, index) => (
                         <Project key={index} projectData={project} />
