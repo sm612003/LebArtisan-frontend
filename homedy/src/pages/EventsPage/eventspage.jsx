@@ -8,7 +8,7 @@ import HeroEvent from '../../components/heroEvent/HeroEvent';
 
 const Eventspage = () => {
   return (
-    <div>
+    <div style={{marginTop:'80px'}}>
       <HeroEvent/>
       <Events/>
       {/* < Eventdetails/> */}

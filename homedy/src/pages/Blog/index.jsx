@@ -115,7 +115,7 @@ const WorkshopDetails = () => {
               <p>{workshop.capacity}</p>
             </article>
             <article className="achievement_card">
-              <span className="achievement_icon">
+              <span  className="achievement_icon">
                 <FaMoneyBillAlt />
               </span>
               <h3>Cost</h3>

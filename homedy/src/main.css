@@ -48,11 +48,7 @@
 .top-icon svg {
   padding: 10px;
 }
-svg {
-  margin: 0 !important;
-  margin-top: 15px !important;
-  margin-left: 5px !important;
-}
+
 
 .sidebar-container {
   height: 100%;

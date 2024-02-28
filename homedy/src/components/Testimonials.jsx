@@ -270,7 +270,7 @@ const Testimonials = ({ eventId }) => {
     <div className='p-8 overflow-hidden text-center relative category'>
       <Heading
         title="Artisan"
-        description="Immerse yourself in a world of creativity and craftsmanship as you explore the unique stories behind each artisan's work"
+        description=" Discover the rich tapestry of talents embraced within this event, where every piece tells a story, and every artist's vision unfolds in a symphony of artistry and passion."
       />
       <Slider {...settings}>
         {acceptedArtists.map(artist => (

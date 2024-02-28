@@ -17,8 +17,7 @@ export default function Home() {
 
 
   return (
-    <div>
-<h1>home</h1>
+    <div style={{marginTop:'84px'}}>
 < HeroSectionHomepage/>
 
 

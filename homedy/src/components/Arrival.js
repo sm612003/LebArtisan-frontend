@@ -344,24 +344,35 @@ import { Link } from "react-router-dom";
 const ImageSlider = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
   const [events, setEvents] = useState([]);
-
+  const [timer, setTimer] = useState()
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     const fetchEvents = async () => {
       try {
         const response = await fetch("http://localhost:5000/events/read/all");
         const data = await response.json();
         setEvents(data);
+        setTimer(2000)
+        setLoading(false)
+        // Initialize position indexes based on the number of events
+        setPositionIndexes(Array.from({ length: data.length }, (_, index) => index));
       } catch (error) {
+        setLoading(false)
+
         console.error("Error fetching events:", error);
       }
     };
-  
+
     fetchEvents();
-  
-    const interval = setInterval(handleNext, 1000);
+
+    const interval = setInterval(handleNext, timer);
+
+    // Clear interval on component unmount
     return () => clearInterval(interval);
-  }, []);
-  
+  }, [timer]); // Empty dependency array ensures this effect runs only once on mount
+
+
+
 
   const handleNext = () => {
     if (events.length > 0) {
@@ -382,16 +393,17 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center \ h-screen relative overflow-hidden" style={{backgroundColor:'#E1E1E0'}}>
+    !loading &&
+    <div className="flex flex-col items-center justify-center  h-screen relative overflow-hidden" style={{ backgroundColor: '#E1E1E0' }}>
       <div className="mb-8 text-center">
-      <p className="font-playfair font-semibold text-4xl" style={{marginTop:'50px',color:'#8B8B8B'}} >
-                        <span className="text-red" style={{ color: '#0E4D4F'  }}>Upcoming </span>Events
-                    </p>
+        <p className="font-playfair font-semibold text-4xl" style={{ marginTop: '50px', color: '#8B8B8B' }} >
+          <span className="text-red" style={{ color: '#0E4D4F' }}>Upcoming </span>Events
+        </p>
 
-                    <div className="flex justify-center mt-5">
-                        <div style={{ borderBottom: '2px solid #6C9192', width: '66.67%' }} />
-                    </div>
-        <p style={{ marginTop: '50px', fontSize: '25px',color:'#8B8B8B' }}>Discover our upcoming events and mark your calendars!</p>
+        <div className="flex justify-center mt-5">
+          <div style={{ borderBottom: '2px solid #6C9192', width: '66.67%' }} />
+        </div>
+        <p style={{ marginTop: '50px', fontSize: '25px', color: '#8B8B8B' }}>Discover our upcoming events and mark your calendars!</p>
       </div>
       <div className="slider-container" style={{ width: "70%", height: "90%", position: "relative", marginBottom: '300px', marginRight: '30%' }}>
         {events.map((event, index) => (
@@ -403,7 +415,7 @@ const ImageSlider = () => {
               variants={imageVariants}
               transition={{ duration: 0.5 }}
             >
-              <img src={`${process.env.REACT_APP_BACKEND}/${event.image}`} alt={event.title} style={{ width: "100%", height: "auto", marginBottom: "10px",borderRadius:'15px' }} />
+              <img src={`${process.env.REACT_APP_BACKEND}/${event.image}`} alt={event.title} style={{ width: "100%", height: "auto", marginBottom: "10px", borderRadius: '15px' }} />
               <p style={{ textAlign: 'center', color: '#0E4D4F', fontSize: '20px', fontWeight: 'bold' }}>{event.title}</p>
             </motion.div>
           </Link>

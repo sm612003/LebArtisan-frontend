@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <section className='hero'>
-        <div className='container'>
+        <div className='container' style={{paddingLeft:'0',paddingRight:'0'}}>
           {items.map((item) => {
             return (
               <>

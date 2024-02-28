@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../project.css';
 import { Link } from 'react-router-dom';
+import EmptyList from '../../common/EmptyList';
 
 const container = {
     hidden: {},
@@ -19,6 +20,7 @@ const projectVariant = {
 };
 
 const Project = ({ projectData }) => {
+
     const { BrandName, userImage, about_us } = projectData;
 
     const overlayStyles = `absolute h-full w-full overlay-container hover:opacity-90 transition duration-500
@@ -52,6 +54,8 @@ const Project = ({ projectData }) => {
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);
+    const [loading, setLoading] = useState(true); // State for loading indicator
+
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -62,12 +66,14 @@ const Projects = () => {
                     // Limiting to only 6 artists
                     const limitedData = data.slice(0, 5);
                     setProjects(limitedData);
+                    setLoading(false); // Set loading to false after fetching
                 } else {
                     console.error('Failed to fetch projects');
                 }
             } catch (error) {
                 console.error('Error fetching projects:', error);
             }
+            
         };
     
         fetchProjects();
@@ -75,7 +81,7 @@ const Projects = () => {
     
 
     return (
-        <section id="projects" className="pt-48 pb-48">
+        <section id="projects" className="pt-16 pb-48">
             {/* HEADINGS */}
             <motion.div
                 className="md:w-2/5 mx-auto text-center"
@@ -91,7 +97,7 @@ const Projects = () => {
                 <div>
 
                     <p className="font-playfair font-semibold text-4xl">
-                        <span className="text-red" style={{ color: '#0E4D4F' }}>TALENTED</span> ARTISANS
+                        <span className="text-red" style={{ color: '#0E4D4F',marginBottom:'100px' }}>TALENTED</span> ARTISANS
                     </p>
 
                     <div className="flex justify-center mt-5">
@@ -107,6 +113,9 @@ const Projects = () => {
 </p>
             </motion.div>
             <div className="flex justify-center">
+            {loading ? (
+                <EmptyList/>
+                ) : (
                 <motion.div
                     className="sm:grid sm:grid-cols-3"
                     variants={container}
@@ -125,10 +134,11 @@ const Projects = () => {
                         <Project key={index} projectData={project} />
                     ))}
                 </motion.div>
- 
+                 )}
+
             </div>
-            <div className='style button' style={{ marginLeft: '45%' }}>
-    <Link to="/services" className="view-more-button" style={{ textDecoration: 'none' }}>View More</Link>
+            <div className='style button' style={{ marginLeft: '45%', marginTop:'4%' }}>
+    <Link to="/product" className="view-more-button" style={{ textDecoration: 'none' }}>View More</Link>
 </div>
 
         </section>

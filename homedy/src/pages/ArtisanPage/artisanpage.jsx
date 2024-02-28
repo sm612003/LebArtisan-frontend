@@ -12,7 +12,7 @@ import Banner from '../../components/Banner'
 export default function Artisan() {
   return (
     <>
-      <div className="bg-white">
+      <div className="bg-white" style={{marginTop:'80px'}}>
         <Hero/>
         {/* < HeroSectionHomepage/> */}
 

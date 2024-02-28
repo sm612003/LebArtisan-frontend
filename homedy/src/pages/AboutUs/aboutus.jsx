@@ -6,7 +6,7 @@ import Work from '../../components/Projects'
 
 const Aboutus = () => {
   return (
-    <div>
+    <div style={{marginTop:'80px'}}>
       <Landing/>
       <Work/>
       <MySkills/>

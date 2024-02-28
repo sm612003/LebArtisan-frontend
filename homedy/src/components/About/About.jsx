@@ -200,7 +200,7 @@ const About = ({ title, description, videoUrl }) => {
                                 <source src={`${process.env.REACT_APP_BACKEND}/${videoUrl}`} type='video/mp4' />
                             </video>
                             <button type='button' className='vidPlayBtn flex flex-c' onClick={playVideo}>
-                                <FaPlay className='text-brown' size={28} />
+                                <FaPlay  style={{marginTop:'15px', marginLeft:'15px'}} className='text-brown' size={28} />
                             </button>
                         </div>
                         <div className='section-title'>

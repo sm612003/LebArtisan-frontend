@@ -29,7 +29,7 @@ const HeroEvent = () => {
               {/* Main title */}
               <motion.h1 className={HeroEvents.title} variants={textVariants}>
 
-              Discover the  <span className={HeroEvents.spann}>Artisanal  Essence </span>  of Every  Event <span className={HeroEvents.spann}></span>
+              Discover the  Artisanal  Essence  of Every  Event 
               </motion.h1>
               <motion.h2 className={HeroEvents.Title} variants={textVariants}>
               From cultural festivals to craft fairs, our page is your gateway 

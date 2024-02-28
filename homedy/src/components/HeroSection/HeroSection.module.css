@@ -46,6 +46,7 @@ align-items: center;
     height: 75%;
     width: 100%;
     letter-spacing: 3px;
+    text-shadow: 4px 3px 2px #00000055;
 
 }
 

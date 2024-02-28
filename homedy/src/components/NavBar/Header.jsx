@@ -76,7 +76,7 @@ export default function Header() {
 
                 {/* NavLink for Services */}
                 <li >
-                  <NavLink to='/services' activeclassname={styles.activeLink} className={`${styles.menuItem} ${location.pathname === '/services' ? styles.activeNavItem : ''} ${location.pathname === '/checkout' || location.pathname === '/confirmed' || location.pathname === '/developers' || location.pathname === '/profile' || location.pathname === "/cart" ? styles.blue : styles.white}`}>
+                  <NavLink to='/product' activeclassname={styles.activeLink} className={`${styles.menuItem} ${location.pathname === '/product' ? styles.activeNavItem : ''} ${location.pathname === '/checkout' || location.pathname === '/confirmed' || location.pathname === '/developers' || location.pathname === '/profile' || location.pathname === "/cart" ? styles.blue : styles.white}`}>
                     Artisans                </NavLink>
                 </li>
 

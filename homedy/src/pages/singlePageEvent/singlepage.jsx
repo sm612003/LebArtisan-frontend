@@ -264,7 +264,7 @@ const Eventdetails = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 mt-28" style={{ backgroundColor: '#E0EFF6' }}>
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 mt-28" style={{ backgroundColor: '#E0EFF6' ,marginTop:'87px'}}>
         <img src={`http://localhost:5000/${event && event.image}`} width={500} height={500} alt="Event" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-red-500 mb-4" style={{ color: '#0E4D4F' }}>{event && event.title}</h2>

@@ -33,7 +33,7 @@ const Router = () => {
 
             {/* /* <Route index path="/confirmed" element={<ConfirmationPage />} /> */}
             {/* <Route path="/product" element={<Products />} /> */}
-            <Route index path="/services" element={<Artisan />} />
+            <Route index path="/product" element={<Artisan />} />
             <Route path="/product/:artistId" element={<ProductDetail />} />
 
             <Route index path="/workshop" element={<Workshop />} />
@@ -41,9 +41,10 @@ const Router = () => {
 
 
             <Route index path="/events" element={<Eventspage />} />
+            <Route path="/event/:eventId" element={<DetailsEvent />} />
+
             <Route index path="/About" element={<Aboutus />} />
             {/* Route to render single event details based on the event ID */}
-            <Route path="/event/:eventId" element={<DetailsEvent />} />
 
 
           </Route>

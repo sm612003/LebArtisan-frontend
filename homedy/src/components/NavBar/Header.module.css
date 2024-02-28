@@ -6,13 +6,11 @@
   z-index: 2;
   width: 100%;
 }
-.headerTransparent{
-  background-color:#E1E1E0;
+/* .headerTransparent{
 
-}
+} */
 .imagee{
   width: 140px;
-  margin-top: 1rem;
 }
 .headerBule{
   background-color: var(--first-blue-color);
@@ -25,13 +23,12 @@
 }
 .navbar {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   width: 90%;
   height: 90px;
   z-index: 1000;
-  background-color:transparent;
-
+  background-color: transparent;
 }
 .button{
   background-color: #0E4D4F;
@@ -53,6 +50,9 @@
   gap: 1.5rem;
   position: relative;
 }
+ul{
+  margin:0 !important;
+}
 
 .menu li:nth-child(5) {
   border-right: 1px solid white;
@@ -68,11 +68,6 @@
   /* Transition the color property for smooth effect */
 }
 .closeMenu {
-  position: absolute;
-  top: 35px;
-  right: 35px;
-  cursor: pointer;
-  color:blueviolet;
   display: none;
 }
 .white{
@@ -181,7 +176,8 @@ color:#0E4D4F;
     top: 35px;
     right: 35px;
     cursor: pointer;
-    color:red;
+    color:#0E4D4F;
+        display: block;
   }
   .mobile_btn {
     display: flex;
@@ -240,13 +236,13 @@ color:#0E4D4F;
   .active {
     left: 0;
   }
-  .closeMenu {
+  /* .closeMenu {
     position: absolute;
     top: 35px;
     right: 35px;
     cursor: pointer;
     color:red;
-  }
+  } */
 
   .navbar Link {
     font-size: 2rem;
