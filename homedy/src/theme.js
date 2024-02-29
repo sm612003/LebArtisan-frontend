@@ -30,11 +30,11 @@ export const tokens = (mode) => ({
         greenAccent: {
           100: "#dbf5ee",
           200: "#b7ebde",
-          300: "#94e2cd",
+          300: "#ffffff",
           400: "#70d8bd",
           500: "#4cceac",
           600: "#3da58a",
-          700: "#2e7c67",
+          700: "#94e2cd",
           800: "#1e5245",
           900: "#0f2922",
         },
@@ -87,7 +87,7 @@ export const tokens = (mode) => ({
         greenAccent: {
           100: "#0f2922",
           200: "#1e5245",
-          300: "#2e7c67",
+          300: "black",
           400: "#3da58a",
           500: "#4cceac",
           600: "#70d8bd",
