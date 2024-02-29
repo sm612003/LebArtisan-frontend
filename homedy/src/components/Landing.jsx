@@ -1,8 +1,8 @@
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import img from '../assets/pexels-sena-12377188.jpg'
+import { Link } from "react-router-dom";
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
@@ -75,7 +75,7 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <AnchorLink
+          <Link
        className="rounded-sm py-3 px-7 font-semibold 
       hover:text-white transition duration-500"
       style={{ backgroundColor: '#70908B', marginLeft: '320px', textDecoration: 'none', color:'white' }}
@@ -85,7 +85,7 @@ href="#contact"
 
           >
             Contact Me
-          </AnchorLink>
+          </Link>
         
         </motion.div>
 
