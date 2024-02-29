@@ -5,7 +5,7 @@ import { UserContext } from "../../UserContext/UserContext";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-    const {user, setUser, fetchUserData} = useContext(UserContext);
+    const { setUser} = useContext(UserContext);
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
       email:'',

@@ -1,26 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ProtectedRoute from "./Protected.jsx";
+// import ProtectedRoute from "./Protected.jsx";
 import React from "react";
-import { useContext } from "react";
-import { UserContext } from "../UserContext/UserContext.jsx";
+// import { useContext } from "react";
+// import { UserContext } from "../UserContext/UserContext.jsx";
 import Signup from "../pages/Signup/Signup.jsx";
 import Login from "../pages/Login/Login.jsx";
 import Home from "../pages/home/home.jsx";
 import Workshop from "../pages/WorkShop/workshop.jsx";
-import Blog from '../pages/Blog/index.jsx';
+// import Blog from '../pages/Blog/index.jsx';
 import Dashboard from "../pages/Dashboard/Dashboar.jsx";
 import ProductDetail from "../pages/portfolioArtisan/portfolio.jsx";
-import Dashboardone from "../scenes/dashboard/index.jsx";
-import Team from "../scenes/team/index.jsx";
-import Invoices from "../scenes/invoices/index.jsx";
-import Contacts from "../scenes/contacts/index.jsx";
-import Bar from "../scenes/bar/index.jsx";
-// import Form from "../../scenes/form/index.jsx";
-import Line from "../scenes/line/index.jsx";
-import Pie from "../scenes/pie/index.jsx";
-import FAQ from "../scenes/faq/index.jsx";
-import Geography from "../scenes/geography/index.jsx";
-import Calendar from '../scenes/calendar/calendar.jsx'
+// import Team from "../scenes/team/index.jsx";
 
 // import Unauthorized from "../Pages/Unauthorized/Unauthorized.jsx";
 // import NotFound from "../Pages/NotFound/NotFound.jsx";
@@ -28,7 +18,7 @@ import Calendar from '../scenes/calendar/calendar.jsx'
 import Layout from "./Layout.jsx";
 import Artisan from "../pages/ArtisanPage/artisanpage.jsx";
 import Eventspage from "../pages/EventsPage/eventspage.jsx";
-import Eventdetails from "../pages/singlePageEvent/singlepage.jsx";
+// import Eventdetails from "../pages/singlePageEvent/singlepage.jsx";
 import DetailsEvent from "../pages/DetailsEvent.jsx";
 import Aboutus from "../pages/AboutUs/aboutus.jsx";
 import WorkshopDetails from "../pages/Blog/index.jsx";

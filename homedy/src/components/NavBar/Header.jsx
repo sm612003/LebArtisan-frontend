@@ -1,12 +1,11 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import toast from "react-hot-toast"
 import styles from "./Header.module.css";
 import logo from '../../assets/Homédy.png';
-import { AiOutlineMenu, AiOutlineClose, AiOutlineShoppingCart } from 'react-icons/ai';
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { NavLink, useLocation } from "react-router-dom";
 import { UserContext } from "../../UserContext/UserContext";
-import { CartContext } from "../../UserContext/CartContext";
 import { useContext } from "react";
 import axios from 'axios';
 import Avatar from '@mui/material/Avatar';
@@ -22,7 +21,6 @@ export default function Header() {
 
   const location = useLocation();
 
-  const navigate = useNavigate();
   const logout = async () => {
     try {
       const action = await axios.post(`${process.env.REACT_APP_BACKEND}/logout`, {}, { withCredentials: true });

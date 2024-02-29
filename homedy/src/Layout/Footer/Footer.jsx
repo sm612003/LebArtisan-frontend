@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.module.css";
 import styles from "./Footer.module.css";
-import confluence from "../../assets/Homédy.png";
-import anglesRight from "../../assets/angles-right-solid.svg";
-import { FaPaperPlane } from 'react-icons/fa';
 import { FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 

@@ -5,6 +5,7 @@ import Card from "./Card"
 
 const Hero = () => {
   const [items, setIems] = useState(hero)
+  console.log(setIems)
 
   return (
     <>

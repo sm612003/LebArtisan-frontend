@@ -121,7 +121,7 @@ const WorkshopDetails = () => {
               <h3>Cost</h3>
               <p>${workshop.cost}</p>
             </article>
-            <a href={`https://wa.me/${workshop.artisanId.userId.whatsapp}`} target="_blank" className="achievement_card" style={{ textDecoration: 'none' }}>
+            <a href={`https://wa.me/${workshop.artisanId.userId.whatsapp}`} target="blank" className="achievement_card" style={{ textDecoration: 'none' }}>
               <span className="achievement_icon">
                 <FaWhatsapp />
               </span>

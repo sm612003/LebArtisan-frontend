@@ -1,22 +1,22 @@
 import img from '../../assets/Intersect (8).png';
 import React from "react";
-import { Link } from "react-router-dom"; 
+// import { Link } from "react-router-dom"; 
 import HeroSectionCss from "./herosection.module.css";
-import { motion } from "framer-motion"
-const textVariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.2,
-    },
-  },
-};
+// import { motion } from "framer-motion"
+// const textVariants = {
+//   initial: {
+//     x: -500,
+//     opacity: 0,
+//   },
+//   animate: {
+//     x: 0,
+//     opacity: 1,
+//     transition: {
+//       duration: 1,
+//       staggerChildren: 0.2,
+//     },
+//   },
+// };
 
 const HeroSectionHomepage = () => {
   return (

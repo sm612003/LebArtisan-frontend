@@ -1,6 +1,6 @@
 import React from 'react'
 import Landing from '../../components/Landing'
-import Projects from '../../components/Projects'
+// import Projects from '../../components/Projects'
 import MySkills from '../../components/MySkills'
 import Work from '../../components/Projects'
 

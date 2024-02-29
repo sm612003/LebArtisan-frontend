@@ -1,6 +1,5 @@
 import { React, useState, useContext } from "react";
 import styles from '../Signup/Signup.module.css'
-import { Prev } from "react-bootstrap/esm/PageItem";
 import axios from "axios";
 import { UserContext } from "../../UserContext/UserContext";
 import { useNavigate } from "react-router-dom";
@@ -9,7 +8,7 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   const {user, setUser}=useContext(UserContext)
   const navigate = useNavigate()
-
+console.log(user)
   const [formData, setFormData] =useState({
     name:'',
     email:'',

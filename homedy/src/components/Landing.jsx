@@ -1,4 +1,4 @@
-import SocialMediaIcons from "../components/SocialMediaIcons";
+// import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import img from '../assets/pexels-sena-12377188.jpg'

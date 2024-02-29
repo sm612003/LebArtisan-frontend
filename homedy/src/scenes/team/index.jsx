@@ -107,7 +107,7 @@
 // };
 
 // export default Team;
-import { Box, Button, Typography, useTheme, Dialog, DialogActions, DialogContent, DialogContentText } from "@mui/material";
+import { Box, Button,  useTheme, Dialog, DialogActions, DialogContent, DialogContentText } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { useEffect, useState } from "react";
 import Axios from "axios";
@@ -142,7 +142,7 @@ const Team = () => {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [artistToDelete, setArtistToDelete] = useState(null);
 
-
+console.log(artistToDelete)
 
   useEffect(() => {
     const fetchData = async () => {

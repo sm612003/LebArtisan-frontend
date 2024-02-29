@@ -57,7 +57,7 @@ import React, { useState, useEffect } from 'react';
 import EmptyList from '../../common/EmptyList/index';
 import WorkshopList from '../../components/Home/BlogList';
 import SearchBar from '../../components/Home/SearchBar';
-import Header from '../../components/Home/Header/index';
+// import Header from '../../components/Home/Header/index';
 import HeroSectionHomepage from '../HeroSectionWorkshop/herosection';
 
 const Workshop = () => {

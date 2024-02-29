@@ -1,7 +1,7 @@
-import facebook from '../assets/facebook.png'
+// import facebook from '../assets/facebook.png'
 import insta from '../assets/instagram.png'
 import link from '../assets/linkedin.png'
-import twitter from '../assets/twitter.png'
+// import twitter from '../assets/twitter.png'
 const SocialMediaIcons = () => {
   return (
     <div className="flex justify-center md:justify-start my-10 gap-7">
