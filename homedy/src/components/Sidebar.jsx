@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, MenuItem } from "react-pro-sidebar";
 import { ProSidebar } from 'react-pro-sidebar';
-import img from '/home/souhad-moussa/lebartisan/LebArtisan-frontend/homedy/src/assets/sousou.jpg'
+// import img from '/home/souhad-moussa/lebartisan/LebArtisan-frontend/homedy/src/assets/sousou.jpg'
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
@@ -93,13 +93,13 @@ const Sidebar = () => {
 
           {!isCollapsed && (
             <Box mb="25px">
-              <Box display="flex" justifyContent="center" alignItems="center">
+              {/* <Box display="flex" justifyContent="center" alignItems="center">
                 <img
                   alt="profile-user"
                   src={img}
                   style={{ cursor: "pointer", borderRadius: "50%" ,width:'140px',height:'160px',objectFit:'cover'}}
                 />
-              </Box>
+              </Box> */}
               <Box textAlign="center">
                 <Typography
                   variant="h2"
