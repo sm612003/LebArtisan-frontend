@@ -33,7 +33,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProductImages = async (artisanId) => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_BACKEND}product/image/${artisanId}`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND}/product/image/${artisanId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch product images');
         }

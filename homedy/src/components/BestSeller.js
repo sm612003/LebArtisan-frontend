@@ -17,7 +17,7 @@ const Category = () => {
 
   const fetchArtists = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND}:5000/artist/byName`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND}/artist/byName`);
       if (!response.ok) {
         throw new Error('Failed to fetch artists');
       }
@@ -123,7 +123,7 @@ const Category = () => {
             title="Our Artisans"
             description="Handmade treasures, where artistry meets soul, bringing beauty into every fold"
           />
-          <div className="m-4 grid grid-cols-4 gap-4">
+          <div className="m-4 grid grid-cols-4 gap-4" style={{width:'200%'}}>
             {loading ? (
               <EmptyList />
             ) : (
