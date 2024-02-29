@@ -60,7 +60,7 @@ const Projects = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('http://localhost:5000/artist/byName');
+                const response = await fetch(`${process.env.REACT_APP_BACKEND}/artist/byName`);
                 if (response.ok) {
                     const data = await response.json();
                     // Limiting to only 6 artists

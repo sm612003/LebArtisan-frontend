@@ -10,7 +10,7 @@ const Events = () => {
 
     useEffect(() => {
         // Fetch events data from the backend
-        axios.get('http://localhost:5000/events/read/all')
+        axios.get(`${process.env.REACT_APP_BACKEND}/events/read/all`)
             .then(response => {
                 // Set the fetched events data to state
                 setEvents(response.data);

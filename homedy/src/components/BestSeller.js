@@ -17,7 +17,7 @@ const Category = () => {
 
   const fetchArtists = async () => {
     try {
-      const response = await fetch("http://localhost:5000/artist/byName");
+      const response = await fetch(`${process.env.REACT_APP_BACKEND}:5000/artist/byName`);
       if (!response.ok) {
         throw new Error('Failed to fetch artists');
       }
@@ -33,7 +33,7 @@ const Category = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch("http://localhost:5000/category/read/all");
+      const response = await fetch(`${process.env.REACT_APP_BACKEND}/category/read/all`);
       const data = await response.json();
       setCategories(data);
     } catch (error) {
@@ -70,7 +70,7 @@ const Category = () => {
         setArtists(allArtists);
       } else {
         // Fetch artists by selected categories
-        const response = await fetch(`http://localhost:5000/artist/ByCategory/${selectedCategories.join(',')}`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND}/artist/ByCategory/${selectedCategories.join(',')}`);
         const data = await response.json();
         setArtists(data);
       }

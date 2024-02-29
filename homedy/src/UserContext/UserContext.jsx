@@ -19,7 +19,7 @@ export const UserProvider = ({ children }) => {
       setCheckUser(true);
 
       const response = await axios.get(
-        `http://localhost:5000/logged-in-user`,
+        `${process.env.REACT_APP_BACKEND}/logged-in-user`,
         { withCredentials: true }
       );
       setUser(response.data.data);
@@ -34,7 +34,7 @@ export const UserProvider = ({ children }) => {
   };
 
   const logOut = async () => {
-    await axios.post(`http://localhost:5000/logout`);
+    await axios.post(`${process.env.REACT_APP_BACKEND}/logout`);
     setUser(null);
   };
 

@@ -16,7 +16,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchArtistDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/artist/${artistId}`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND}/artist/${artistId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch artist details');
         }
@@ -33,7 +33,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProductImages = async (artisanId) => {
       try {
-        const response = await fetch(`http://localhost:5000/product/image/${artisanId}`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND}product/image/${artisanId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch product images');
         }

@@ -72,7 +72,7 @@ const Workshop = () => {
 
   const fetchWorkshops = async () => {
     try {
-      const response = await fetch('http://localhost:5000/workshop/read/all');
+      const response = await fetch(`${process.env.REACT_APP_BACKEND}/workshop/read/all`);
       const data = await response.json();
       setWorkshops(data);
     } catch (error) {

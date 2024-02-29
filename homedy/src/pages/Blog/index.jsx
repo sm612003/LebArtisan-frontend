@@ -74,7 +74,7 @@ const WorkshopDetails = () => {
     // Fetch workshop data based on the id parameter
     const fetchWorkshop = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/workshop/${id}`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND}/workshop/${id}`);
         const data = await response.json();
         setWorkshop(data);
       } catch (error) {

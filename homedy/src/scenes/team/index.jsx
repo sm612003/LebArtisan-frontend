@@ -147,7 +147,7 @@ const Team = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await Axios.get("http://localhost:5000/artist/read/all");
+        const response = await Axios.get(`${process.env.REACT_APP_BACKEND}/artist/read/all`);
         setArtistData(response.data);
       } catch (error) {
         console.error("Error fetching artist data:", error);
