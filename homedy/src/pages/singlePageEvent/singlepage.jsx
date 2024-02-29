@@ -53,6 +53,7 @@ const Eventdetails = () => {
     }
   };
 
+
   const TAB_DATA = [
     {
       title: "Location",

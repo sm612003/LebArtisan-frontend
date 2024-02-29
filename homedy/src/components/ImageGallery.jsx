@@ -50,7 +50,7 @@ export function ImageGallery({ images }) {
           <div key={index} className="col-md-4 px-2">
             <div className="my-3">
               <img  src={`${process.env.REACT_APP_BACKEND}/${imageUrl}`}
- className="img-fluid" alt={`pop ${index + 1}`} />
+ className="img-fluid" alt={`Image ${index + 1}`} />
             </div>
           </div>
         ))}
