@@ -26,7 +26,7 @@ export default function Home() {
 {/* <About/> */}
 {/* <Business/> */}
 <Projects/>
-<Testimonials/>
+{/* <Testimonials/> */}
 
 < ImageSlider />
 

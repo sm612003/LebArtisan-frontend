@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { Menu, MenuItem } from "react-pro-sidebar";
-import { ProSidebar } from 'react-pro-sidebar';
-import img from '/home/souhad-moussa/lebartisan/LebArtisan-frontend/homedy/src/assets/sousou.jpg'
+import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
-import { tokens } from  "../theme.js";
+import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
@@ -96,8 +94,10 @@ const Sidebar = () => {
               <Box display="flex" justifyContent="center" alignItems="center">
                 <img
                   alt="profile-user"
-                  src={img}
-                  style={{ cursor: "pointer", borderRadius: "50%" ,width:'140px',height:'160px',objectFit:'cover'}}
+                  width="100px"
+                  height="100px"
+                  src={`../../assets/user.png`}
+                  style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
               <Box textAlign="center">
@@ -117,37 +117,37 @@ const Sidebar = () => {
           )}
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-            {/* <Item
+            <Item
               title="Dashboard"
               to="/"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            /> */}
+            />
 
             <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Info
+              Data
             </Typography>
             <Item
-              title="Artist"
-              to="/"
+              title="Manage Team"
+              to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Workshop"
+              title="Contacts Information"
               to="/contacts"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Products"
+              title="Invoices Balances"
               to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
@@ -168,7 +168,7 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-            {/* <Item
+            <Item
               title="Calendar"
               to="/calendar"
               icon={<CalendarTodayOutlinedIcon />}
@@ -217,7 +217,7 @@ const Sidebar = () => {
               icon={<MapOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            /> */}
+            />
           </Box>
         </Menu>
       </ProSidebar>
