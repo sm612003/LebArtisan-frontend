@@ -55,7 +55,7 @@ const WorkshopItem = ({
   },
 }) => {
   return (
-    <div className='blogItem-wrap'>
+    <div className='blogItem-wrap' >
       <img className='blogItem-cover' src={`${process.env.REACT_APP_BACKEND}/${image}`} alt='workshop cover' />
       <Chip label={categoryTitle} />
       <h3>{title}</h3>

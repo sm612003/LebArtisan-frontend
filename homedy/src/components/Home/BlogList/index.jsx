@@ -21,7 +21,7 @@ import './styles.css';
 
 const WorkshopList = ({ workshops }) => {
   return (
-    <div className='blogList-wrap'>
+    <div className='blogList-wrap' style={{marginBottom:'15%'}}>
       {workshops.map((workshop) => (
         <WorkshopItem workshop={workshop} key={workshop._id} /> 
       ))}
