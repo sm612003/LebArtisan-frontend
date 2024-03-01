@@ -137,7 +137,7 @@ const Projects = () => {
                  )}
 
             </div>
-            <div className='style button' style={{ marginLeft: '45%', marginTop:'4%' }}>
+            <div className='style button'>
     <Link to="/product" className="view-more-button" style={{ textDecoration: 'none' }}>View More</Link>
 </div>
 

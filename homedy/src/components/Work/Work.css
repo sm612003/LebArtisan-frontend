@@ -99,9 +99,21 @@
 
 .style{
     margin-top: 50px;
+
 }
 
+.style.button {
+    margin-left: 45%; /* Default margin left */
+    margin-top: 4%;
+}
 
+/* Media query for z-fold screen */
+@media only screen and (min-width: 280px) and (max-width: 560px) {
+    .style.button {
+        margin-left: 25%;
+        margin-top: 50px; /* Updated margin left for z-fold screen */
+    }
+}
 @media screen and (min-width: 576px){
     .image-box-content{
         left: 50%;
@@ -113,6 +125,7 @@
         max-height: 360px;
         height: 100%;
     }
+
 }
 
 @media screen and (min-width: 678px){

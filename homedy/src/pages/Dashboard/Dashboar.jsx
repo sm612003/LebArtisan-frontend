@@ -13,6 +13,7 @@ import '../Dashboard/dashbord.css'
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "../../theme.js";
+import TableWorkshop from '../tableWokshop/tableWorkshop.jsx';
 
 const Dashboard = () => {
     const [theme, colorMode] = useMode();
@@ -29,7 +30,7 @@ const Dashboard = () => {
                 <Topbar setIsSidebar={setIsSidebar} />
                 <Routes>
                   {/* <Route path="/" element={<Dashboardone/>} /> */}
-                  <Route path="/" element={<Team />} />
+                  <Route path="/" element={<TableWorkshop />} />
                   {/* <Route path="/contacts" element={<Contacts />} />
                   <Route path="/invoices" element={<Invoices />} /> */}
                   {/* <Route path="/form" element={<Form />} /> */}
