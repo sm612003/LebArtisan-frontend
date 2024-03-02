@@ -160,6 +160,7 @@ import Heading from "../common/Heading";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import EmptyList from "../common/EmptyList";
+import {motion,AnimatePresence} from 'framer-motion'
 import '../App.css'
 
 const Products = () => {
@@ -263,9 +264,11 @@ const Products = () => {
         </div>
       </div>
       <section className="w-full md:w-3/4">
-        <div>
+        <motion.div layout>
+          <AnimatePresence>
           {loading ? <EmptyList /> : <GridView products={artists} />}
-        </div>
+          </AnimatePresence>
+        </motion.div>
       </section>
     </div>
   );
