@@ -128,13 +128,22 @@ const Projects = () => {
                         className="flex justify-center text-center items-center p-10  text-2xl font-playfair font-semibold"
                         style={{ backgroundColor: '#6C9192',maxHeight:'100%',maxWidth:'100%'}}
                     >
-                        Crafted with passion, each piece tells a story.
-                    </div>
+Each piece they create is a testament to their passion, skill, and unwavering dedication to their art.                     </div>
                     {projects.map((project, index) => (
                         <Project key={index} projectData={project} />
                     ))}
+                     {/* Another div similar to the one above */}
+                     <div
+                        className="flex justify-center text-center items-center p-10  text-2xl font-playfair font-semibold"
+                        style={{ backgroundColor: '#CAF3E5', maxHeight: '100%', maxWidth: '100%' }}
+                    >
+                       Through their hands, they breathe life into the mundane,
+                        turning simple materials into extraordinary masterpieces.
+                    </div>
                 </motion.div>
+                
                  )}
+                 
 
             </div>
             <div className='style button'>
