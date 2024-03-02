@@ -6,7 +6,7 @@ import '../GridList/Style.css';
 
 const GridView = ({ products }) => {
   return (
-    <div className='blogList-wrap' style={{marginBottom:'15%'}}>
+    <div className='blogListt-wrap' style={{marginBottom:'15%'}}>
         {products.map((curElem) => {
           return <Product key={curElem.id} {...curElem} />;
         })}

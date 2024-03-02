@@ -153,15 +153,29 @@
 
 // export default Category;
 
-
 import styled from "styled-components";
 import GridView from "./GridList/GridList";
 import Heading from "../common/Heading";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import EmptyList from "../common/EmptyList";
-import {motion,AnimatePresence} from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import '../App.css'
+
+const CategoryContainer = styled.div`
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  max-height: 300px; 
+
+  @media (min-width: 280px) and (max-width: 750px) {
+    max-height: none; /* Remove max-height on screens between 280px and 750px */
+  }
+
+  @media (min-width: 750px) {
+    overflow-y: hidden; /* Disable vertical scrolling on screens wider than 750px */
+    max-height: 400px; /* Set a fixed height for the filter section on wider screens */
+  }
+`;
 
 const Products = () => {
   const [allArtists, setAllArtists] = useState([]);
@@ -237,8 +251,8 @@ const Products = () => {
   }, [selectedCategories]);
 
   return (
-    <div className="container mx-auto flex flex-col md:flex-row justify-center" style={{marginTop:'10%',marginBottom:'10%'}}>
-      <div className="w-full md:w-1/4 px-4 mb-4 md:mb-0" style={{ backgroundColor: 'lightblue' }}>
+    <div className="container mx-auto flex flex-col md:flex-row justify-center" style={{ marginTop: '10%', marginBottom: '10%' }}>
+    <CategoryContainer className="w-full md:w-1/4 px-4 mb-4 md:mb-0">
         <Heading title="Category" />
         <div className="flex flex-col items-start">
           <label className="mb-2" style={{ display: 'flex', gap: '15px', fontSize: '20px' }}>
@@ -262,39 +276,17 @@ const Products = () => {
             </label>
           ))}
         </div>
-      </div>
+      </CategoryContainer>
       <section className="w-full md:w-3/4">
         <motion.div layout>
           <AnimatePresence>
-          {loading ? <EmptyList /> : <GridView products={artists} />}
+            {loading ? <EmptyList /> : <GridView products={artists} />}
           </AnimatePresence>
         </motion.div>
       </section>
     </div>
   );
-  
 };
 
-// const Wrapper = styled.section`
-//   .grid-filter-column {
-//     grid-template-columns: 0.2fr 1fr;
-//   }
-
-//   @media (max-width: 750px) {
-//     .grid-filter-column {
-//       grid-template-columns: 1fr;
-//     }
-//   }
-//   .filter-category {
-//     div {
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       gap: 1.4rem;
-//       justify-content: center;
-//   }
-//     }
-//   }
-// `;
-
 export default Products;
+

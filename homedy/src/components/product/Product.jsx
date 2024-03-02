@@ -12,7 +12,6 @@ const Product = ({ id, BrandName, userImage, userId }) => {
       animate={{opacity:1}}
       initial={{opacity:0}}
       exit={{opacity:0}}
-      transition={{duration:0.5}}
        className=" blogItem-wrap">
           <img className='blogItem-cover'  src={imageUrl} alt={BrandName} />
         <div className=" blogItem-author">

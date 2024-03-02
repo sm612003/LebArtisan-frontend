@@ -66,7 +66,7 @@ const WorkshopDetails = () => {
                 <FaWhatsapp />
               </span>
               <span>
-                <h3 style={{ color: '#212523', width: '150px' }}>Contact Us</h3>
+                <h3 style={{ color: '#212523'}}>Contact Us</h3>
                 <p style={{ color: '#212523' }}>Contact us via WhatsApp</p>
               </span>
             </a>
