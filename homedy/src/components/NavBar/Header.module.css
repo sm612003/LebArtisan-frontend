@@ -181,7 +181,7 @@ color:#0E4D4F;
   }
   .mobile_btn {
     display: flex;
-    color: white;
+    color: black;
     cursor: pointer;
     right: 2.5rem;
     top: 50%;
