@@ -12,9 +12,9 @@ const Product = ({ id, BrandName, userImage, userId }) => {
       animate={{opacity:1}}
       initial={{opacity:0}}
       exit={{opacity:0}}
-       className=" blogItem-wrap">
-          <img className='blogItem-cover'  src={imageUrl} alt={BrandName} />
-        <div className=" blogItem-author">
+       className=" blogItemm-wrap">
+          <img className='blogItemm-cover'  src={imageUrl} alt={BrandName} />
+        <div className=" blogItemm-author">
           <div>
             <h3>{BrandName}</h3>
           </div>

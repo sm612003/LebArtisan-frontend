@@ -11,7 +11,7 @@ const SearchBar = ({ formSubmit, value, handleSearchKey, clearSearch, categorySu
         onChange={handleSearchKey}
       />
       {value && <span onClick={clearSearch}>X</span>}
-      <button style={{marginTop:'12px'}}>Go</button>
+      <button >Go</button>
     </form>
     <ul className='category-suggestions'>
       {categorySuggestions.map((category, index) => (

@@ -62,6 +62,8 @@ Workshop              </li>
               <li>
                 Join as Artisan
               </li>
+              </Link>
+
   {/* <h3 className={styles.section__title}>Follow Us</h3> */}
   <div className={styles.social__icons}>
     <a href="https://www.instagram.com/souhad_moussa/?igsh=MXZ0amw0cnF4aGthcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
@@ -76,7 +78,6 @@ Workshop              </li>
   </div>
 
 
-            </Link>
             {/* <a href="https://wa.me/70572631" target="_blank" style={{ textDecoration: 'none' }}>
   <li style={{ display: 'flex', alignItems: 'center' }}>
     Contact Us

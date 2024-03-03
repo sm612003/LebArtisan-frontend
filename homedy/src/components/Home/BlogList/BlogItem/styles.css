@@ -38,10 +38,12 @@
 }
 
 .blogItem-link {
-  text-decoration: none;
-  color: inherit;
-  margin-right: 65px;
-  font-size: 30px;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 72px;
+    font-size: 30px;
+    margin-left: 40px;
+
 }
 
 .blogItem-author {
