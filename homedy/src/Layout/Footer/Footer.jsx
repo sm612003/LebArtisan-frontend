@@ -64,14 +64,14 @@ Workshop              </li>
               </li>
   {/* <h3 className={styles.section__title}>Follow Us</h3> */}
   <div className={styles.social__icons}>
-    <a href="https://www.instagram.com/your-instagram-account" target="_blank" rel="noopener noreferrer">
-      <FaInstagram className={styles.icon} />
+    <a href="https://www.instagram.com/souhad_moussa/?igsh=MXZ0amw0cnF4aGthcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+      <FaInstagram className={styles.icon}   style={{fill:'#0E4D4F'}}/>
     </a>
-    <a href="https://www.linkedin.com/in/your-linkedin-account" target="_blank" rel="noopener noreferrer">
-      <FaLinkedin className={styles.icon} />
+    <a href="https://www.linkedin.com/in/souhad-moussa-84ba67232?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
+      <FaLinkedin className={styles.icon}   style={{fill:'#0E4D4F'}}/>
     </a>
-    <a href="https://wa.me/your-whatsapp-number" target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp className={styles.icon} />
+    <a href="https://wa.me/70572631" target="_blank" rel="noopener noreferrer">
+      <FaWhatsapp className={styles.icon}  style={{fill:'#0E4D4F'}} />
     </a>
   </div>
 

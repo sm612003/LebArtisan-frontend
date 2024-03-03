@@ -43,31 +43,36 @@ const ImageSlider = () => {
   };
 
   const positions = ["center", "left1", "left", "right", "right1"];
-
-  let imageVariants = {
+  const imageVariants = {
     center: { x: "0%", scale: 1, zIndex: 5 },
     left1: { x: "-50%", rotateY: -15, scale: 0.8, zIndex: 3 },
     left: { x: "-90%", rotateY: -30, scale: 0.6, zIndex: 2 },
     right: { x: "90%", rotateY: 30, scale: 0.6, zIndex: 2 },
     right1: { x: "50%", rotateY: 15, scale: 0.8, zIndex: 3 },
   };
-
-  if (screenWidth <= 280) {
-    imageVariants = {
-      center: { x: "-37%", scale: 1, zIndex: 5 },
-      left1: { x: "-50%", rotateY: -15, scale: 0.8, zIndex: 3 },
-      left: { x: "-90%", rotateY: -30, scale: 0.6, zIndex: 2 },
-      right: { x: "90%", rotateY: 30, scale: 0.6, zIndex: 2 },
-      right1: { x: "50%", rotateY: 15, scale: 0.8, zIndex: 3 },
-    };
+  
+  if (screenWidth <= 450) {
+    imageVariants.center = { x: "-27%", scale: 1, zIndex: 5 };
   }
-
+  
   const sliderContainerStyle = screenWidth <= 280 ? {
     width: "193%",
     height: "90%",
     position: "relative",
     marginBottom: '300px',
     marginRight: '25%'
+  } : screenWidth <= 450 ? {
+    width: "189%",
+    height: "90%",
+    position: "relative",
+    marginBottom: '300px',
+    marginRight: '43%'
+  } : screenWidth <= 1048 ? {
+    width: "164%", // Adjusted width
+    height: "90%",
+    position: "relative",
+    marginBottom: '300px',
+    marginRight: '72%' // Adjusted marginRight
   } : {
     width: "70%",
     height: "90%",
@@ -75,7 +80,8 @@ const ImageSlider = () => {
     marginBottom: '300px',
     marginRight: '30%'
   };
-
+  
+  
   return (
     !loading && (
       <div className="flex flex-col items-center justify-center h-screen relative overflow-hidden" style={{ backgroundColor: '#E1E1E0' }}>
@@ -83,7 +89,7 @@ const ImageSlider = () => {
           <p className="font-playfair font-semibold text-4xl" style={{ marginTop: '50px', color: '#8B8B8B' }} >
             <span className="text-red" style={{ color: '#0E4D4F' }}>Upcoming </span>Events
           </p>
-
+  
           <div className="flex justify-center mt-5">
             <div style={{ borderBottom: '2px solid #6C9192', width: '66.67%' }} />
           </div>
@@ -100,7 +106,9 @@ const ImageSlider = () => {
                 transition={{ duration: 0.5 }}
               >
                 <img src={`${process.env.REACT_APP_BACKEND}/${event.image}`} alt={event.title} style={{ width: "100%", height: "auto", marginBottom: "10px", borderRadius: '15px' }} />
-                {screenWidth > 280 && <p style={{ textAlign: 'center', color: '#0E4D4F', fontSize: '20px', fontWeight: 'bold' }}>{event.title}</p>}
+                {screenWidth > 450 && (
+                  <p className="event-title" style={{ position: 'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', color: 'white', fontSize: '20px', fontWeight: 'bold' }}>{event.title}</p>
+                )}
               </motion.div>
             </Link>
           ))}
@@ -108,6 +116,6 @@ const ImageSlider = () => {
       </div>
     )
   );
-};
+                }  
 
 export default ImageSlider;

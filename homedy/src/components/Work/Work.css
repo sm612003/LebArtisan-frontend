@@ -107,11 +107,19 @@
     margin-top: 4%;
 }
 
-/* Media query for z-fold screen */
-@media only screen and (min-width: 280px) and (max-width: 560px) {
+/* Media query for screen sizes between 280px and 450px */
+@media only screen and (min-width: 280px) and (max-width: 370px) {
     .style.button {
         margin-left: 25%;
-        margin-top: 50px; /* Updated margin left for z-fold screen */
+        margin-top: 50px;
+    }
+}
+
+/* Media query for screen sizes between 370px and 450px */
+@media only screen and (min-width: 370px) and (max-width: 450px) {
+    .style.button {
+        margin-left: 31%;
+        margin-top: 50px;
     }
 }
 @media screen and (min-width: 576px){

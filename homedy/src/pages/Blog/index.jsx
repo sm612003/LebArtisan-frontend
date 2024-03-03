@@ -37,7 +37,7 @@ const WorkshopDetails = () => {
            src={`${process.env.REACT_APP_BACKEND}/${workshop.image}`} alt="" />
         </div>
         <div className='about_achievements-right'>
-          <h1>{workshop.title}</h1>
+          <h1 style={{color:'#0E4D4F'}}>{workshop.title}</h1>
           <p>{workshop.description}</p>
           <div className='achievements_cards'>
             <article className="achievement_card">
