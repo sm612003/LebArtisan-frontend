@@ -70,6 +70,24 @@
     z-index: 25;
     background-color: var(--black-color);
 }
+.hover-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.work-item:hover .hover-overlay {
+    opacity: 0.9;
+}
+
 .image-box-content .image-box-close-btn{
     position: absolute;
     top: 15px;

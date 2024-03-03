@@ -13,20 +13,14 @@ const container = {
         },
     },
 };
-
 const projectVariant = {
     hidden: { opacity: 1, scale: 0.6 }, // Adjusted opacity to 1 and scale to 0.6
     visible: { opacity: 1, scale: 1 },  // Adjusted opacity to 1 and scale to 1
 };
-
 const Project = ({ projectData }) => {
-
     const { BrandName, userImage, about_us } = projectData;
-
-    const overlayStyles = `absolute h-full w-full overlay-container hover:opacity-90 transition duration-500
-    bg-gray-200 bg-opacity-90 z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
-    ;
-
+    
+    // Define handleHover and handleHoverOut functions
     const handleHover = (event) => {
         const overlay = event.currentTarget.querySelector('.hover-overlay');
         overlay.style.opacity = '0.9';
@@ -36,20 +30,25 @@ const Project = ({ projectData }) => {
         const overlay = event.currentTarget.querySelector('.hover-overlay');
         overlay.style.opacity = '0'; // Set opacity back to 0 when hover out
     };
+    
+    // Define overlayStyles
+    const overlayStyles = `absolute h-full w-full overlay-container hover:opacity-90 transition duration-500
+        bg-gray-200 bg-opacity-90 z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
 
     return (
-        <motion.div variants={projectVariant} className="relative" onMouseEnter={handleHover} onMouseLeave={handleHoverOut}>
-            <div className={`${overlayStyles}`}>
-                <p className="text-2xl font-playfair">{BrandName}</p>
-                <p className="mt-7 hover-overlay" style={{ opacity: '0' }}>
-                    {about_us.description}
-                </p>
-            </div>
-            <img src={`${process.env.REACT_APP_BACKEND}/${userImage}`} alt={BrandName} className="  transition-opacity duration-500"  style={{maxHeight:'100%',maxWidth:'100%'}}/>
-        </motion.div>
+        <div className="work-item relative">
+            {/* Apply motion to the entire container */}
+            <motion.div variants={projectVariant} className="relative" onMouseEnter={handleHover} onMouseLeave={handleHoverOut}>
+                {/* Apply motion to the overlay */}
+                <motion.div className={`${overlayStyles} hover-overlay`} style={{ opacity: '0' }}>
+                    <p className="text-2xl font-playfair">{BrandName}</p>
+                    <p className="mt-7">{about_us.description}</p>
+                </motion.div>
+                <img src={`${process.env.REACT_APP_BACKEND}/${userImage}`} alt={BrandName} className="transition-opacity duration-500" style={{ maxHeight: '100%', maxWidth: '100%' }} />
+            </motion.div>
+        </div>
     );
 };
-
 
 
 const Projects = () => {
@@ -135,7 +134,7 @@ Each piece they create is a testament to their passion, skill, and unwavering de
                      {/* Another div similar to the one above */}
                      <div
                         className="flex justify-center text-center items-center p-10  text-2xl font-playfair font-semibold"
-                        style={{ backgroundColor: '#CAF3E5', maxHeight: '100%', maxWidth: '100%' }}
+                        style={{ backgroundColor: '#E1E1E0', maxHeight: '100%', maxWidth: '100%' }}
                     >
                        Through their hands, they breathe life into the mundane,
                         turning simple materials into extraordinary masterpieces.
