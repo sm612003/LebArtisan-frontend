@@ -71,4 +71,8 @@
     transition: all .4s ease;
 }
 
-
+@media screen and (max-width:450px) {
+    .venue .venue-list .venue-box .venue-info h2 {
+       margin-left: 66px;
+    }
+}
