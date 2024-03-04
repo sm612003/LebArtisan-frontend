@@ -128,7 +128,7 @@ const Sidebar = () => {
               Info
             </Typography>
             <Item
-              title="Artist"
+              title="Events"
               to="/"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
@@ -136,7 +136,7 @@ const Sidebar = () => {
             />
             <Item
               title="Workshop"
-              to="/contacts"
+              to="/dash/contact"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

@@ -1,6 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 // import ProtectedRoute from "./Protected.jsx";
-import React from "react";
+import React, { useContext } from "react";
 // import { useContext } from "react";
 // import { UserContext } from "../UserContext/UserContext.jsx";
 import Signup from "../pages/Signup/Signup.jsx";
@@ -22,9 +22,12 @@ import Eventspage from "../pages/EventsPage/eventspage.jsx";
 import DetailsEvent from "../pages/DetailsEvent.jsx";
 import Aboutus from "../pages/AboutUs/aboutus.jsx";
 import WorkshopDetails from "../pages/Blog/index.jsx";
+import ProtectedRoute from "./Protected.jsx";
+import { UserContext } from "../UserContext/UserContext.jsx";
 
 const Router = () => {
-  // const { user, checkUser } = useContext(UserContext);
+  const { user, checkUser } = useContext(UserContext);
+  console.log(user)
   return (
     <div>
       <BrowserRouter>
@@ -52,44 +55,15 @@ const Router = () => {
 
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dash" element={<Dashboard />} />
-          {/* <Route path="/dashboad" element={<Dashboardone />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/invoices" element={<Invoices />} /> */}
-          {/* <Route path="/form" element={<Form />} /> */}
-          {/* <Route path="/bar" element={<Bar />} />
-          <Route path="/pie" element={<Pie />} />
-          <Route path="/line" element={<Line />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/calendar" element={<Calendar />} />
-          <Route path="/geography" element={<Geography />} /> */}
+          {/* <Route path="/dash" element={<Dashboard />} /> */}
+          <Route path="/dash" element={user && user.role === 'admin' ? (
+            <ProtectedRoute isAllowed={true}><Dashboard /></ProtectedRoute>
+          ) : (
+            <Navigate to='/' />
+          )}>
 
 
-
-
-          {/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
-          {/* <Route path="/*" element={<NotFound />} /> */}
-
-          {/* <Route
-            element={
-              <ProtectedRoute
-                isAllowed={user && user.role === "admin"}
-                redirectPath="/unauthorized"
-              />
-            }> */}
-          {/* <Route path="/dashboard" element={<Dashboard />}> */}
-          {/* <Route path="overview" index element={<Overview />} />
-              <Route path="category" index element={<CategoryTable />} />
-              <Route path="profile" index element={<DashProfile />} />
-              <Route path="Product/Add" index element={< AddProduct/>} />
-              <Route path="Product/Edit" index element={< EditProduct/>} />
-              <Route path="Products" element={<Productstable/>}/>
-
-          
-
-            {/* </Route> */}
-          {/* </Route> */}
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

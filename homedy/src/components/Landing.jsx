@@ -1,35 +1,37 @@
-// import SocialMediaIcons from "../components/SocialMediaIcons";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import img from '../assets/pexels-sena-12377188.jpg'
 import { Link } from "react-router-dom";
+
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+  
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10 " style={{backgroundColor:'#8B8B8B',marginTop: '32px', height:'100vh' }}
+      className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
+      style={{ backgroundColor: '#8B8B8B', marginTop: '32px'}}
     >
       {/* IMAGE SECTION */}
       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
         {isAboveLarge ? (
           <div
-          className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
-          before:w-full before:max-w-[400px]  before:h-full before:border-2 before:border-0E4D4F before:z-[-1]"
-
+            className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px] before:w-full before:max-w-[400px]  before:h-full before:border-2 before:border-0E4D4F before:z-[-1]"
           >
-          <img
-  alt="profile"
-  className="transition duration-500 z-10 w-full max-w-[400px] border border-blue border-t-0 border-l-0 border-r-0 rounded-t-[400px]"
-  src={img}
-/>
-
+            <img
+              alt="profile"
+              className="transition duration-500 z-10 w-full max-w-[400px] border border-blue border-t-0 border-l-0 border-r-0 rounded-t-[400px]"
+              style={{ zIndex: '1',marginBottom:'100px' }}
+              src={img}
+            />
           </div>
         ) : (
           <img
             alt="profile"
-            className="z-10 w-full max-w-[400px] md:max-w-[600px] border border-blue border-t-0 border-l-0 border-r-0 rounded-t-[400px] "
+            className="z-10 w-full max-w-[400px] md:max-w-[600px] border border-blue border-t-0 border-l-0 border-r-0 rounded-t-[400px]"
             src={img}
+            style={{ zIndex: '1' }}
           />
         )}
       </div>
@@ -47,20 +49,18 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-<p className="text-6xl font-playfair z-10 text-center md:text-start" style={{ color:'white', marginLeft: '100px' }}>
+          <p className="text-6xl font-playfair z-10 text-center md:text-start" style={{ color: 'white', padding: '5px' ,marginLeft:'25px'}}>
             Leb {""}
             <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
+              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
             >
               Artisan
             </span>
           </p>
 
-          <p className="mt-10 mb-7 text-sm text-center md:text-start" style={{ fontSize: '23px',letterSpacing:'5px',lineHeight:'40px' , color:'white',marginLeft: '100px'}}>
-  your gateway to discovering and supporting the rich tapestry of Lebanese craftsmanship. At LebArtisan Connect, we are passionate about celebrating the creativity, skill, and cultural heritage of local artisans across Lebanon."
-</p>
-
+          <p className="mt-10 mb-7 text-sm text-center md:text-start" style={{ fontSize: '23px', letterSpacing: '5px', lineHeight: '29px', color: 'white', padding: '5px' ,marginLeft:'25px'}}>
+            your gateway to discovering and supporting the rich tapestry of Lebanese craftsmanship.
+          </p>
         </motion.div>
 
         {/* CALL TO ACTIONS */}
@@ -75,18 +75,15 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <Link
-       className="rounded-sm py-3 px-7 font-semibold 
-      hover:text-white transition duration-500"
-      style={{ backgroundColor: '#70908B', marginLeft: '320px', textDecoration: 'none', color:'white' }}
-      onClick={() => setSelectedPage("contact")}
-href="#contact"
-
-
+          {/* <Link
+            className="rounded-sm py-3 px-7 font-semibold 
+            hover:text-white transition duration-500"
+            style={{ backgroundColor: '#70908B', marginLeft: '320px', textDecoration: 'none', color: 'white' }}
+            onClick={() => setSelectedPage("contact")}
+            href="#contact"
           >
             Contact Me
-          </Link>
-        
+          </Link> */}
         </motion.div>
 
         <motion.div
@@ -100,6 +97,7 @@ href="#contact"
             visible: { opacity: 1, x: 0 },
           }}
         >
+          {/* Other content */}
         </motion.div>
       </div>
     </section>

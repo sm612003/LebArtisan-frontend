@@ -32,6 +32,7 @@ const Dashboard = () => {
                 <Routes>
                   {/* <Route path="/" element={<Dashboardone/>} /> */}
                   <Route path="/" element={<AllEvents />} />
+                  <Route path="/contacts"   element={<Team />} />
                   {/* <Route path="/contacts" element={<Contacts />} />
                   <Route path="/invoices" element={<Invoices />} /> */}
                   {/* <Route path="/form" element={<Form />} /> */}

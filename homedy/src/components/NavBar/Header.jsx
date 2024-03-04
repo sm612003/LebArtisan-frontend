@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast"
 import styles from "./Header.module.css";
-import logo from '../../assets/Homédy.png';
+import logo from '../../assets/Souhad - log-29.png';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { NavLink, useLocation } from "react-router-dom";
 import { UserContext } from "../../UserContext/UserContext";
@@ -105,9 +105,9 @@ export default function Header() {
                 user.role === "admin" ? (
                   <li>
                     <NavLink
-                      to="/dashboard"
+                      to="/dash"
                       activeclassname={styles.activeLink}
-                      className={`${styles.menuItem} ${location.pathname === '/dashboard' ? styles.activeNavItem : ''} ${location.pathname === '/checkout' || location.pathname === '/confirmed' || location.pathname === '/developers' || location.pathname === '/profile' || location.pathname === '/cart' ? styles.blue : styles.white}`}
+                      className={`${styles.menuItem} ${location.pathname === '/dash' ? styles.activeNavItem : ''} ${location.pathname === '/checkout' || location.pathname === '/confirmed' || location.pathname === '/developers' || location.pathname === '/profile' || location.pathname === '/cart' ? styles.blue : styles.white}`}
                     >
                       Dashboard
                     </NavLink>

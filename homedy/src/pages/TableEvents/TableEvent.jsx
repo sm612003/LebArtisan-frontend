@@ -17,79 +17,127 @@ const AllEvents = () => {
     const [artisanStatus, setArtisanStatus] = useState({});
     const [selectedArtisanStatus, setSelectedArtisanStatus] = useState({});
 
+    // const handleOpenModal = (event) => {
+    //     setSelectedEvent(event);
+    //     setEventArtisans(event?.Artisans || []);
+
+    //     // Reset selectedArtisanStatus before initializing
+    //     setSelectedArtisanStatus({});
+
+    //     // Initialize selectedArtisanStatus with the current status of each artisan
+    //     event?.Artisans.forEach((artisan, index) => {
+    //         if (index === 0) { // Only consider the first artisan
+    //             // setSelectedArtisan(artisan.artist); // Set selectedArtisan to the ID of the first artisan
+    //             console.log(event)
+    //             console.log("Artisan:", artisan.artist); // Log artisan
+    //             console.log("Status:", artisan.status);
+    //         }
+    //         setSelectedArtisanStatus(prevStatus => ({
+    //             ...prevStatus,
+    //             [artisan.artist]: artisan.status
+    //         }));
+    //     });
+
+    //     setOpenModal(true);
+    // };
+
     const handleOpenModal = (event) => {
         setSelectedEvent(event);
         setEventArtisans(event?.Artisans || []);
-    
+
         // Reset selectedArtisanStatus before initializing
         setSelectedArtisanStatus({});
-    
+
+        // Log all artisans
+        console.log("Artisans:");
+        event?.Artisans.forEach((artisan, index) => {
+            // console.log(`Artisan ${index + 1}:`);
+            // console.log(artisan.artist);
+        });
+
         // Initialize selectedArtisanStatus with the current status of each artisan
-        event?.Artisans.forEach(artisan => {
+        event?.Artisans.forEach((artisan) => {
             setSelectedArtisanStatus(prevStatus => ({
                 ...prevStatus,
-                [artisan._id]: artisan.status
+                [artisan.artist]: artisan.status
             }));
         });
-    
+
         setOpenModal(true);
     };
-    
-    
-    
+
+    // console.log(selectedArtisanStatus)
+
+
+
+
+    // console.log(selectedArtisan)
+
+
+
     const handleStatusChange = (event, artistId) => {
         const newStatus = event.target.value;
         setSelectedArtisanStatus(prevStatus => ({
             ...prevStatus,
-            [artistId]: newStatus
+            [artistId]: newStatus  // Use artistId instead of _id
         }));
     };
-    
-    
+
+
+    // const handleUpdateStatus = async (event) => {
+    //     try {
+    //         const participationRequests = Object.entries(selectedArtisanStatus)
+    //             .map(([artistId, status]) => ({ artistId, status }));
+
+    //         console.log("part", participationRequests);
+
+    //         // Send the participationRequests to the backend
+    //         const response = await Axios.put(`${process.env.REACT_APP_BACKEND}/events/admin/manage`, {
+    //             eventId: selectedEvent._id,
+    //             participationRequests
+    //         });
+
+    //         console.log(response.data.message);
+    //         // Handle the response as needed
+
+    //         // Close the modal or perform any additional actions
+    //         handleCloseModal();
+    //     } catch (error) {
+    //         console.error('Error updating status:', error);
+    //     }
+    //     console.log("status", selectedArtisanStatus)
+    // };
+
     const handleUpdateStatus = async () => {
         try {
-            const participationRequests = Object.entries(selectedArtisanStatus)
-                .map(([artistId, status]) => ({ artistId, status }));
-    
-            console.log('Participation Requests:', participationRequests);
-    
+            // Create an array to store the updated participation requests
+            const updatedParticipationRequests = [];
+
+            // Loop through selectedArtisanStatus object to create participation requests
+            Object.entries(selectedArtisanStatus).forEach(([artistId, status]) => {
+                // Create a participation request object for each artist
+                updatedParticipationRequests.push({ artistId, status });
+            });
+            console.log(selectedEvent._id)
+            console.log(updatedParticipationRequests)
+
+            // Send the updated participationRequests to the backend
             const response = await Axios.put(`${process.env.REACT_APP_BACKEND}/events/admin/manage`, {
                 eventId: selectedEvent._id,
-                participationRequests
+                participationRequests: updatedParticipationRequests
             });
-    
-            console.log(response.data.message);
-    
-            setEvents(prevEvents => {
-                return prevEvents.map(event => {
-                    if (event._id === selectedEvent._id) {
-                        const updatedArtisans = event.Artisans.map(artisan => {
-                            const updatedStatus = participationRequests.find(request => request.artistId === artisan._id);
-                            if (updatedStatus) {
-                                return {
-                                    ...artisan,
-                                    status: updatedStatus.status
-                                };
-                            } else {
-                                return artisan;
-                            }
-                        });
-                        return {
-                            ...event,
-                            Artisans: updatedArtisans
-                        };
-                    } else {
-                        return event;
-                    }
-                });
-            });
-    
+
+            console.log(response.data);
+            // Handle the response as needed
+
+            // Close the modal or perform any additional actions
             handleCloseModal();
         } catch (error) {
             console.error('Error updating status:', error);
         }
     };
-    
+
+
 
     useEffect(() => {
         const fetchEvents = async () => {
@@ -117,13 +165,13 @@ const AllEvents = () => {
         };
         fetchEvents();
     }, []); // Empty dependency array to run only once
-    console.log("eventss",events)
-    console.log("eventartisan",eventArtisans)
-    
+    // console.log("eventss",events)
+    // console.log("eventartisan",eventArtisans)
+
     useEffect(() => {
-        console.log("Selected artisan:", selectedArtisan);
+        // console.log("Selected artisan:", selectedArtisan);
     }, [selectedArtisan]);
-    
+
 
 
     const handleCloseModal = () => {
@@ -213,16 +261,14 @@ const AllEvents = () => {
                     Edit Artisan Status
                 </DialogContentText>
                 {selectedEvent && selectedEvent.Artisans.map((artisan) => (
-                    <div key={artisan._id}>
+                    <div key={artisan._id}> {/* Access _id of the artisan */}
                         <p>{artisan.BrandName}</p>
                         <FormControl fullWidth>
                             <InputLabel>Status</InputLabel>
                             <Select
-    value={selectedArtisanStatus[artisan._id] || artisan.status}
-    onChange={(event) => handleStatusChange(event, artisan._id)}
->
-
-
+                                value={selectedArtisanStatus[artisan.artist] || artisan.status}
+                                onChange={(event) => handleStatusChange(event, artisan.artist)}
+                            >
                                 <MenuItem value="pending">Pending</MenuItem>
                                 <MenuItem value="accepted">Accepted</MenuItem>
                                 <MenuItem value="rejected">Rejected</MenuItem>
@@ -230,6 +276,7 @@ const AllEvents = () => {
                         </FormControl>
                     </div>
                 ))}
+
                 <Button style={{ backgroundColor: 'white' }} onClick={handleUpdateStatus}>Update</Button>
             </DialogContent>
 
