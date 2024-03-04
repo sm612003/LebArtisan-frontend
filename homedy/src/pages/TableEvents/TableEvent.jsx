@@ -205,7 +205,7 @@ const AllEvents = () => {
 
     return (
         <Box m="20px">
-            <Header title="Artist Information" subtitle="Managing your info " />
+            <Header title="Events Information" subtitle="Managing your events info " />
             <Box
                 m="40px 0 0 0"
                 height="75vh"

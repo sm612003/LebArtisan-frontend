@@ -20,12 +20,12 @@ const MySkills = () => {
           }}
         >
           <p className="font-playfair font-semibold text-4xl mb-5">
-            <span className="text-red" style={{ color: '#0E4D4F' }}>My </span>Skills
+            <span className="text-red" style={{ color: '#0E4D4F' }}>Hom</span>edy
           </p>
           <div style={{ borderBottom: '2px solid #6C9192', width: '66.67%' }} />
           <p className="mt-10 mb-7">
-            Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-            fames odio in at.
+          By bridging the gap between artisans and consumers, we aim to create opportunities
+           for economic empowerment and cultural exchange, fostering a community that celebrates creativity, craftsmanship, and individuality.
           </p>
         </motion.div>
 
@@ -65,17 +65,15 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">01</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Experience
+                Our Mission
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32  absolute right-0 top-0 z-[-1]"   style={{backgroundColor:'#E0EFF6'}}
           />
           </div>
           <p className="mt-5">
-            A auctor pharetra hendrerit mattis amet etiam interdum platea. Est
-            morbi porttitor scelerisque fermentum, sagittis non egestas. Amet
-            odio sit sagittis,
-          </p>
+          At Homedy, our mission is to empower and promote artisans and local businesses by providing them with a platform to showcase their 
+          handmade creations. We believe in celebrating craftsmanship and supporting the passion and talent behind every unique piece.           </p>
         </motion.div>
 
         {/* INNOVATIVE */}
@@ -94,16 +92,14 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">02</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Innovative
+             Our  Values
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]"  style={{backgroundColor:'#B1D4D6'}}/>
           </div>
           <p className="mt-5">
-            Urna, eget pulvinar dolor cursus volutpat dictum odio. Nec ultricies
-            amet in in neque nibh tortor. Libero sed pretium justo nulla blandit
-            nulla amet habitant iaculis. Iaculis in congue vitae sollicitudin
-            faucibus a
+          We value authenticity in everything we do. We celebrate the unique stories, traditions,
+           and craftsmanship behind each handmade item, fostering genuine connections between artisans and consumers.
           </p>
         </motion.div>
         {/* IMAGINATIVE */}
@@ -122,16 +118,14 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">03</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Imaginative
+              Our Vision
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 absolute right-0 top-0 z-[-1]"  style={{backgroundColor:'#6C9192'}}/>
           </div>
           <p className="mt-5">
-            Accumsan eu fringilla nisi, eget. Vitae, eget ut id proin arcu in
-            curabitur. Lectus libero, egestas enim aliquam quis felis amet.
-            Sagittis, amet netus fringilla netus lobortis odio sed platea.
-            Bibendum.
+          Our vision at Homedy is to create a global community that values and sustains the beauty of handmade goods. We envision a world where
+           artisans are recognized and rewarded for their skills, where consumers appreciate the stories and effort imbued into each handmade item
           </p>
         </motion.div>
       </div>

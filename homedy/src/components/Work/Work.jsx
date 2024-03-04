@@ -19,6 +19,7 @@ const projectVariant = {
 };
 const Project = ({ projectData }) => {
     const { BrandName, userImage, about_us } = projectData;
+
     
     // Define handleHover and handleHoverOut functions
     const handleHover = (event) => {
@@ -54,6 +55,11 @@ const Project = ({ projectData }) => {
 const Projects = () => {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true); // State for loading indicator
+    const screenWidth = window.innerWidth;
+
+    // Conditionally add class based on screen width
+    const textAlignmentClass = screenWidth >= 280 && screenWidth <= 450 ? "text-left" : "";
+    const borderWidthClass = screenWidth >= 280 && screenWidth <= 450 ? "custom-border-width" : "";
 
 
     useEffect(() => {
@@ -80,7 +86,7 @@ const Projects = () => {
     
 
     return (
-        <section id="projects" className="pt-16 pb-48">
+        <section id="projects" className="pt-16 pb-48" >
             {/* HEADINGS */}
             <motion.div
                 className="md:w-2/5 mx-auto text-center"
@@ -99,13 +105,13 @@ const Projects = () => {
                         <span className="text-red" style={{ color: '#0E4D4F',marginBottom:'100px' }}>TALENTED</span> ARTISANS
                     </p>
 
-                    <div className="flex justify-center mt-5">
-                        <div style={{ borderBottom: '2px solid #6C9192', width: '66.67%' }} />
-                    </div>
 
+<div className="flex justify-center mt-5">
+  <div className={borderWidthClass} style={{ borderBottom: '2px solid #6C9192', width: '66.67%' }} />
+</div>
 
                 </div>
-                <p className="mt-10 mb-10" style={{fontSize:'20px'}}>
+                <p className={`mt-10 mb-10 ${textAlignmentClass}`} style={{ fontSize: '20px' }}>
     Discover our talented artisans who bring creativity and skill to every project. 
     From innovative designs to masterful craftsmanship, our artisans 
     infuse passion into their work, creating unique and exceptional experiences for you.
@@ -123,8 +129,7 @@ const Projects = () => {
                     viewport={{ once: true, amount: 0.2 }}
                 >
                     {/* ROW 1 */}
-                    <div
-                        className="flex justify-center text-center items-center p-10  text-2xl font-playfair font-semibold"
+                    <div className={`flex justify-center  items-center p-10 text-2xl font-playfair font-semibold ${textAlignmentClass}`}
                         style={{ backgroundColor: '#6C9192',maxHeight:'100%',maxWidth:'100%'}}
                     >
 Each piece they create is a testament to their passion, skill, and unwavering dedication to their art.                     </div>
@@ -132,9 +137,9 @@ Each piece they create is a testament to their passion, skill, and unwavering de
                         <Project key={index} projectData={project} />
                     ))}
                      {/* Another div similar to the one above */}
-                     <div
-                        className="flex justify-center text-center items-center p-10  text-2xl font-playfair font-semibold"
-                        style={{ backgroundColor: '#E1E1E0', maxHeight: '100%', maxWidth: '100%' }}
+                     
+                    <div className={`flex justify-center  items-center p-10 text-2xl font-playfair font-semibold ${textAlignmentClass}`}
+                    style={{ backgroundColor: '#E1E1E0', maxHeight: '100%', maxWidth: '100%' }}
                     >
                        Through their hands, they breathe life into the mundane,
                         turning simple materials into extraordinary masterpieces.

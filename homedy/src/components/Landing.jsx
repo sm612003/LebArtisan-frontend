@@ -49,7 +49,7 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start" style={{ color: 'white', padding: '5px' ,marginLeft:'25px'}}>
+          <p className="text-6xl font-playfair z-10 md:text-start" style={{ color: 'white', padding: '1px' ,margin:'0 auto', width:'94%', marginBottom:'50px'}}>
             Leb {""}
             <span
               className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
@@ -58,8 +58,11 @@ const Landing = ({ setSelectedPage }) => {
             </span>
           </p>
 
-          <p className="mt-10 mb-7 text-sm text-center md:text-start" style={{ fontSize: '23px', letterSpacing: '5px', lineHeight: '29px', color: 'white', padding: '5px' ,marginLeft:'25px'}}>
+          <p className="mt-10 mb-7 text-sm  md:text-start" style={{ fontSize: '23px', letterSpacing: '5px',  width:'94%',lineHeight: '30px', color: 'white', padding: '1px' ,margin:'0 auto'}}>
             your gateway to discovering and supporting the rich tapestry of Lebanese craftsmanship.
+          Our platform serves as a digital marketplace where
+             artisans can showcase their creations, tell their stories,
+              and connect directly with customers who appreciate the value of handcrafted goods.
           </p>
         </motion.div>
 

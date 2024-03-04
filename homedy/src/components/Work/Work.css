@@ -131,6 +131,16 @@
         margin-left: 25%;
         margin-top: 50px;
     }
+    .text-center {
+        text-align: left !important;
+        width: 94%;
+      }
+      .text-left {
+        text-align: left !important;
+      }
+      .custom-border-width {
+        width: 94% !important;
+      }
 }
 
 /* Media query for screen sizes between 370px and 450px */
@@ -139,6 +149,16 @@
         margin-left: 31%;
         margin-top: 50px;
     }
+    .text-center {
+        text-align: left !important;
+        width: 94%;
+      }
+      .text-left {
+        text-align: left !important;
+      }
+      .custom-border-width {
+        width: 94% !important;
+      }
 }
 @media screen and (min-width: 576px){
     .image-box-content{

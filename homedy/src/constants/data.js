@@ -1,7 +1,13 @@
 import images from "./images";
-import img1 from '../assets/images/pexels-pixabay-301703.jpg'
-import img2 from '../assets/images/pexels-antoni-shkraba-4348401.jpg'
-import img3 from  '../assets/images/pexels-antoni-shkraba-4348081.jpg'
+import img1 from '../assets/pexels-valeriia-miller-3547625.jpg'
+import img2 from '../assets/pexels-yan-krukau-6611420.jpg'
+import img3 from  '../assets/pexels-vlada-karpovich-6755753.jpg'
+import img4 from  '../assets/pexels-freestocksorg-3940334.jpg'
+import img5 from  '../assets/pexels-gustavo-fring-4241342.jpg'
+import img6 from  '../assets/pexels-skylar-kang-6430729.jpg'
+
+
+
 
 const services = [
     {
@@ -47,13 +53,13 @@ const works = [
         image: `${img3}`
     },
     {
-        image: `${img1}`
+        image: `${img4}`
     },
     {
-        image: `${img2}`
+        image: `${img5}`
     },
     {
-        image: `${img3}`
+        image: `${img6}`
     },
 ];
 

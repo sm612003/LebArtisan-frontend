@@ -21,7 +21,8 @@ const textVariants={
 }
   return (
     <section className={`${HeroSectionCss.container} ${HeroSectionCss.containerHero}`}>
-    <div className={HeroSectionCss.main}>
+    <motion.div className={HeroSectionCss.main} variants={textVariants} initial="initial" animate="animate">
+
       <div className={HeroSectionCss.detail}>
         <motion.h1 className={HeroSectionCss.title} variants={textVariants}>
           Learn <span className={HeroSectionCss.spann}> Handcraft</span> to start your own business
@@ -39,7 +40,8 @@ const textVariants={
           className={HeroSectionCss.imgW}
         />
       </div>
-    </div>
+      
+      </motion.div>
   </section>
   
   );

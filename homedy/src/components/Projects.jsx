@@ -159,7 +159,7 @@ const Work = () => {
         <div className='container'>
             <div className='work-content'>
                 <div className='section-title'>
-                    <h3 className='text-brown'>Our <span className='Artisan'>Artisans</span></h3>
+                    <h3 className='text-brown' style={{color:'gray'}}> Our <span className='Artisan'>Artisans</span></h3>
                     <p className='text'>Handcrafted by famous artisans 
 in Bat Trang pottery village.</p>
                 </div>

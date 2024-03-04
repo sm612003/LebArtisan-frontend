@@ -5,4 +5,31 @@
       width: 200%; /* Adjust width for smaller screens */
     }
   }
+  /* Media query for screen sizes between 280px and 450px */
+@media only screen and (min-width: 280px) and (max-width: 370px) {
+
+  .text-center {
+      text-align: left !important;
+      width: 94%;
+    }
+    .text-left {
+      text-align: left !important;
+    }
+    .custom-border-width {
+      width: 94% !important;
+    }
+}
   
+  @media only screen and (min-width: 370px) and (max-width: 450px) {
+
+    .text-center {
+        text-align: left !important;
+        width: 94%;
+      }
+      .text-left {
+        text-align: left !important;
+      }
+      .custom-border-width {
+        width: 94% !important;
+      }
+}

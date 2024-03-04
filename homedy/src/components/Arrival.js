@@ -9,6 +9,8 @@ const ImageSlider = () => {
   const [timer, setTimer] = useState();
   const [loading, setLoading] = useState(true);
   const screenWidth = window.innerWidth;
+  const borderWidthClass = screenWidth >= 280 && screenWidth <= 450 ? "custom-border-width" : "";
+
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -91,8 +93,8 @@ const ImageSlider = () => {
           </p>
   
           <div className="flex justify-center mt-5">
-            <div style={{ borderBottom: '2px solid #6C9192', width: '66.67%' }} />
-          </div>
+  <div className={borderWidthClass} style={{ borderBottom: '2px solid #6C9192', width: '66.67%' }} />
+</div>
           <p style={{ marginTop: '50px', fontSize: '25px', color: '#8B8B8B' }}>Discover our upcoming events and mark your calendars!</p>
         </div>
         <div className="slider-container" style={sliderContainerStyle}>

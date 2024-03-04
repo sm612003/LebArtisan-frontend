@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Menu, MenuItem } from "react-pro-sidebar";
 import { ProSidebar } from 'react-pro-sidebar';
+import toast from "react-hot-toast";
+import axios from "axios";
+
 // import img from '/home/souhad-moussa/lebartisan/LebArtisan-frontend/homedy/src/assets/sousou.jpg'
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -10,6 +13,10 @@ import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import { UserContext } from "../UserContext/UserContext.jsx";
+import LogoutIcon from "@mui/icons-material/Logout"; // Import the logout icon
+
+import { useContext } from "react";
 
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 // import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
@@ -36,7 +43,36 @@ const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const {user, setUser}=useContext(UserContext)
   const [selected, setSelected] = useState("Dashboard");
+
+  const logout = async () => {
+    try {
+      const action = await axios.post(`${process.env.REACT_APP_BACKEND}/logout`, {}, { withCredentials: true });
+      if (action) {
+        localStorage.removeItem('token')
+        setUser(null);
+        toast.success("Logout successful!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+
+      }
+    } catch (error) {
+      toast.error("An unexpected error occurred. Please try again.", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
 
   return (
     <Box
@@ -77,7 +113,6 @@ const Sidebar = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  ADMINIS
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -102,10 +137,9 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Ed Roh
+                  {user.name}
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  VP Fancy Admin
                 </Typography>
               </Box>
             </Box>
@@ -134,7 +168,7 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-            <Item
+            {/* <Item
               title="Workshop"
               to="/dash/contact"
               icon={<ContactsOutlinedIcon />}
@@ -162,7 +196,17 @@ const Sidebar = () => {
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
+             {/* Add the logout button */}
+             <MenuItem
+              onClick={() => logout()} // Call your logout function here
+              style={{
+                color: colors.grey[100],
+              }}
+              icon={<LogoutIcon />} // You can replace LogoutIcon with your preferred icon
+            >
+              <Typography>Logout</Typography>
+            </MenuItem>
             {/* <Item
               title="Calendar"
               to="/calendar"
