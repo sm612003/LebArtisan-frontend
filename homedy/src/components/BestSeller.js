@@ -172,8 +172,7 @@ const CategoryContainer = styled.div`
   }
 
   @media (min-width: 750px) {
-    overflow-y: hidden; /* Disable vertical scrolling on screens wider than 750px */
-    max-height: 400px; /* Set a fixed height for the filter section on wider screens */
+    max-height: 800px; /* Set a fixed height for the filter section on wider screens */
   }
 `;
 

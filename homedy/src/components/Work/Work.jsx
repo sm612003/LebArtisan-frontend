@@ -69,7 +69,7 @@ const Projects = () => {
                 if (response.ok) {
                     const data = await response.json();
                     // Limiting to only 6 artists
-                    const limitedData = data.slice(0, 5);
+                    const limitedData = data.slice(0, 4);
                     setProjects(limitedData);
                     setLoading(false); // Set loading to false after fetching
                 } else {
