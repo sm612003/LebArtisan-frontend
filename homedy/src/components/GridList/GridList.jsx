@@ -8,7 +8,7 @@ const GridView = ({ products }) => {
   return (
     <div className='blogListt-wrap' style={{marginBottom:'15%'}}>
         {products.map((curElem) => {
-          return <Product key={curElem.id} {...curElem} />;
+          return <Product key={curElem.id} {...curElem} artistId={curElem._id} />;
         })}
     </div>
   );
