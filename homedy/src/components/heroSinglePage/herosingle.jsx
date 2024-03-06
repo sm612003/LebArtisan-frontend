@@ -28,8 +28,8 @@ const HeroSectionsingle = () => {
                 <motion.div className={herosingle.content} variants={textVariants} initial="initial" animate="animate">
                     {/* Main title */}
                     <motion.h1 className={herosingle.title} variants={textVariants}>
-                    <span className={herosingle.spann}> Ceramic</span>
-                        Collection
+                    <span className={herosingle.spann}> our </span>
+                        Products
                     </motion.h1>
                     <motion.h2 className={herosingle.Title} variants={textVariants}>
                         Handcrafted by famous artisans

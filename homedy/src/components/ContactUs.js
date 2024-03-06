@@ -117,16 +117,49 @@
 // };
 
 // export default ContactUs;
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img from '../assets/pexels-freestocksorg-3940335.jpg';
 import styles from '../components/contactus.module.css';
 
 const ContactUs = ({ contactInfo }) => {
-  
+  const [containerStyle, setContainerStyle] = useState({});
+
+  useEffect(() => {
+    const updateStyles = () => {
+      const windowWidth = window.innerWidth;
+      if (windowWidth >= 280 && windowWidth < 450) {
+        setContainerStyle({
+          backgroundColor: 'whitesmoke',
+          marginTop: '70px',
+          height: '672px'
+        });
+      } else if (windowWidth >= 450) {
+        setContainerStyle({
+          width: '600px',
+          backgroundColor: 'whitesmoke',
+          marginLeft: '60%',
+          marginTop: '70px',
+          height: '672px'
+        });
+      } else {
+        // Reset styles for other screen widths
+        setContainerStyle({});
+      }
+    };
+
+    // Update styles when the window is resized
+    window.addEventListener('resize', updateStyles);
+    // Initial call to set styles when the component mounts
+    updateStyles();
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', updateStyles);
+  }, []);
+
   return (
     <div className={styles.container}>
-      <div className="bg-white ">
-        <div className="absolute text-black font-semibold p-10" style={{ width: '600px', backgroundColor: 'whitesmoke', marginLeft: '60%', marginTop: '70px', height: '672px' }}>
+      <div className="bg-white relative">
+        <div className="absolute text-black font-semibold p-10" style={containerStyle}>
           <div className="p-2">
             <h4 className="uppercase text-2xl mb-4">Hello Customer!</h4>
             <h2 className="uppercase text-5xl">Visit our store</h2>
@@ -155,6 +188,7 @@ const ContactUs = ({ contactInfo }) => {
       </div>
     </div>
   );
-  }  
+}
 
 export default ContactUs;
+

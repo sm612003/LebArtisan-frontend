@@ -19,6 +19,14 @@
 
 
 }
+@media screen and (min-width: 280px) and (max-width: 450px)  {
+    .absolute {
+      margin-left: 0;
+      margin-top: 70px;
+      height: 672px;
+    }
+  }
+  
  a:hover{
     color: #70908B  !important;
  }
